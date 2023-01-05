@@ -1,0 +1,25 @@
+<div class="row justify-content-center">
+    <app-header [pageTitle]="pageTitle" [subTitle]="subTitle"></app-header>
+    <table class="table table-sm table-responsive col-auto" id="createnew">
+        <tr>
+            <th>Id</th>
+            <td><Input [(ngModel)]="user.id" type="number" disabled ngDefaultControl></td>
+        </tr>
+        <tr>
+            <th>Member Name</th>
+            <td><Input [(ngModel)]="user.username" ngDefaultControl></td>
+        </tr>
+        <tr>
+            <th>Favorite Food?</th>
+            <td><Input [(ngModel)]="user.favorite" ngDefaultControl></td>
+        </tr>
+    </table>
+    <table class="table table-sm">
+        <tr>
+            <th></th>
+            <td id="tdButton">
+                <button id="createBtn" (click)="create()" class="btn btn-primary">Add New Member</button>
+            </td>
+        </tr>
+    </table>
+</div>

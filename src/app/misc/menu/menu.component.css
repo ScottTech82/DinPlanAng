@@ -1,0 +1,14 @@
+#MenuName {
+    display: inline-table;
+    font-size: larger;
+    margin-top: 15%;
+    text-decoration: none;
+    color: black;
+    /*width: 10%;*/
+}
+#MenuName:hover{
+    color: green;
+}
+
+
+

@@ -1,0 +1,29 @@
+#usertable{
+    width: 70% !important;
+    margin-left: 10%;
+    margin-top: 1%;
+}
+.table-hover tbody tr:hover{
+    background-color: rgb(209, 247, 253);
+}
+#create{
+    /* text-decoration: none; */
+    color:rgb(34, 100, 102);
+    /* padding-left: 22%; */
+    /* color: black; */
+    margin-left: 22%;
+    /* padding: 0px 15px; */
+}
+#create:hover{
+    color:green;
+}
+#uBtn{
+    text-decoration: none;
+    color: black;
+}
+#note{
+    padding-left: 30%;
+    color: rgb(25, 95, 97);
+    font-style: italic;
+}
+

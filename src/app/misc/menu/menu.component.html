@@ -1,0 +1,8 @@
+<nav>
+    <ul>
+        <button class="btn btn-link" id="MenuName" (click)="collapseMenu()" (mouseover)="collapseMenu()">- Menu - </button>
+            <ng-container *ngIf="seemenu === true">
+                <app-menuitem *ngFor="let m of menus" [menu]="m"></app-menuitem>
+            </ng-container>
+    </ul>
+</nav>

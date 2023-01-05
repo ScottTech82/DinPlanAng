@@ -1,0 +1,15 @@
+li {
+    display: block;
+    padding-top: 3%;
+}
+a{
+    text-decoration: none;
+    padding-left: 15%;
+    color: rgb(51, 90, 92);
+    font-size: large;
+    font-style: italic;
+    
+}
+a:hover{
+    color:rgb(114, 183, 214);
+}

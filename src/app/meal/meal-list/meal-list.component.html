@@ -1,0 +1,29 @@
+<div id="users" class="row justify-content-center">
+    <app-header [pageTitle]="pageTitle" [subTitle]="subTitle"></app-header>
+    <table>
+        <a routerLink="/meal/create" id="create">Add Meal</a>
+        <span id="note">*You can click on a meal to update or delete.</span>
+    </table>
+    <table class="table table-sm table-hover table-responsive col-auto" id="usertable">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Description</th>
+                <th>Cook Type</th>
+                <th>Cook Time</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let m of meals">
+                <td><button id="uBtn" class="btn btn-link" (click)="(m.id)">{{m.id}}</button></td>
+                <td><button id="uBtn" class="btn btn-link" (click)="(m.id)">{{m.name}}</button></td>
+                <td><button id="uBtn" class="btn btn-link" (click)="(m.id)">{{m.type}}</button></td>
+                <td><button id="uBtn" class="btn btn-link" (click)="(m.id)">{{m.description}}</button></td>
+                <td><button id="uBtn" class="btn btn-link" (click)="(m.id)">{{m.cookType}}</button></td>
+                <td><button id="uBtn" class="btn btn-link" (click)="(m.id)">{{m.cookTime}}</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
