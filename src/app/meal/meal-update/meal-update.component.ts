@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Meal } from '../meal.class';
+import { MealService } from '../meal.service';
 
 @Component({
   selector: 'app-meal-update',
@@ -11,15 +12,27 @@ export class MealUpdateComponent implements OnInit {
   meal!: Meal;
   pageTitle: string = "Dinner Planner!";
   subTitle: string = "Update Meal";
+  showVerifBtn: boolean = false;
 
-  constructor() { }
+  constructor(
+    private mealsvc: MealService,
+    
+  ) { }
 
   update(): void {
+    this.mealsvc.change(this.meal).subscribe({
+      next: (res) => {
+
+      }
+    })
 
   }
 
   remove(): void {
-    
+
+  }
+  verifyRemove(): void {
+
   }
 
   ngOnInit(): void {
