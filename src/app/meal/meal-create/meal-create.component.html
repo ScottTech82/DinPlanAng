@@ -3,22 +3,34 @@
     <table class="table table-sm table-responsive col-auto" id="createnew">
         <tr>
             <th>Id</th>
-            <td><Input [(ngModel)]="user.id" type="number" disabled ngDefaultControl></td>
+            <td><Input [(ngModel)]="meal.id" type="number" disabled ngDefaultControl></td>
         </tr>
         <tr>
-            <th>Member Name</th>
-            <td><Input [(ngModel)]="user.username" ngDefaultControl></td>
+            <th>Meal Name</th>
+            <td><Input [(ngModel)]="meal.name" ngDefaultControl></td>
         </tr>
         <tr>
-            <th>Favorite Food?</th>
-            <td><Input [(ngModel)]="user.favorite" ngDefaultControl></td>
+            <th>Type of Meal</th>
+            <td><Input [(ngModel)]="meal.type" ngDefaultControl></td>
+        </tr>
+        <tr>
+            <th>Description</th>
+            <td><Input [(ngModel)]="meal.description" ngDefaultControl></td>
+        </tr>
+        <tr>
+            <th>Cook Time</th>
+            <td><Input [(ngModel)]="meal.cookTime" ngDefaultControl></td>
+        </tr>
+        <tr>
+            <th>Cook Type</th>
+            <td><Input [(ngModel)]="meal.cookType" ngDefaultControl></td>
         </tr>
     </table>
     <table class="table table-sm">
         <tr>
             <th></th>
             <td id="tdButton">
-                <button id="createBtn" (click)="create()" class="btn btn-primary">Add New Member</button>
+                <button id="createBtn" (click)="add()" class="btn btn-primary">Add Meal</button>
             </td>
         </tr>
     </table>
