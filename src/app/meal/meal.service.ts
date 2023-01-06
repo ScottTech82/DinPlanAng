@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { SystemService } from '../common/system.service';
+import { User } from '../user/user.class';
 import { Meal } from './meal.class';
 
 @Injectable({
@@ -23,9 +24,13 @@ export class MealService {
     return this.http.get(`${this.baseurl}/${id}`) as Observable<Meal>;
   }
 
-  create
+  create(user: User): Observable<Meal> {
+    return this.http.post(`${this.baseurl}`, user) as Observable<Meal>;
+  }
 
-  change
+  change(user: User): Observable<any> {
+    
+  }
 
   delete(): 
 }
