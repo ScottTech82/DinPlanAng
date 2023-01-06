@@ -15,6 +15,7 @@ import { UserCreateComponent } from './user/user-create/user-create.component';
 import { UserUpdateComponent } from './user/user-update/user-update.component';
 import { MealListComponent } from './meal/meal-list/meal-list.component';
 import { MealCreateComponent } from './meal/meal-create/meal-create.component';
+import { MealUpdateComponent } from './meal/meal-update/meal-update.component';
 
 export function startupServiceFactory(appInit: AppInitService): Function {
   return () => appInit.getSettings();
@@ -31,7 +32,8 @@ export function startupServiceFactory(appInit: AppInitService): Function {
     UserCreateComponent,
     UserUpdateComponent,
     MealListComponent,
-    MealCreateComponent
+    MealCreateComponent,
+    MealUpdateComponent
   ],
   imports: [
     BrowserModule,
