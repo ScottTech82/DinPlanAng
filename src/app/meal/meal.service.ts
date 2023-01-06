@@ -20,17 +20,21 @@ export class MealService {
   list(): Observable<Meal[]> {
     return this.http.get(`${this.baseurl}`) as Observable<Meal[]>;
   }
+
   get(id: number): Observable<Meal> {
     return this.http.get(`${this.baseurl}/${id}`) as Observable<Meal>;
   }
 
-  create(user: User): Observable<Meal> {
-    return this.http.post(`${this.baseurl}`, user) as Observable<Meal>;
+  create(meal: Meal): Observable<Meal> {
+    return this.http.post(`${this.baseurl}`, meal) as Observable<Meal>;
   }
 
-  change(user: User): Observable<any> {
-    
+  change(meal: Meal): Observable<any> {
+    return this.http.put(`${this.baseurl}/${meal.id}`, meal) as Observable<any>;
   }
 
-  delete(): 
+  delete(id: number): Observable<any> {
+    return this.http.delete(`${this.baseurl}/${id}`) as Observable<any>;
+  }
+
 }
