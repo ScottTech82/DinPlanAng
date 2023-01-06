@@ -1,0 +1,46 @@
+<div class="row justify-content-center">
+    <app-header [pageTitle]="pageTitle" [subTitle]="subTitle"></app-header>
+    <table class="table table-sm table-responsive col-auto" id="createnew">
+        <tr>
+            <th>Id</th>
+            <td><Input [(ngModel)]="meal.id" type="number" disabled ngDefaultControl></td>
+        </tr>
+        <tr>
+            <th>Meal Name</th>
+            <td><Input [(ngModel)]="meal.name" ngDefaultControl></td>
+        </tr>
+        <tr>
+            <th>Type of Meal</th>
+            <td><Input [(ngModel)]="meal.type" ngDefaultControl></td>
+        </tr>
+        <tr>
+            <th>Description</th>
+            <td><Input [(ngModel)]="meal.description" ngDefaultControl></td>
+        </tr>
+        <tr>
+            <th>Cook Time</th>
+            <td><Input [(ngModel)]="meal.cookTime" ngDefaultControl></td>
+        </tr>
+        <tr>
+            <th>Cook Type</th>
+            <td><Input [(ngModel)]="meal.cookType" ngDefaultControl></td>
+        </tr>
+    </table>
+    <table class="table table-sm">
+        <tr>
+            <th></th>
+            <td id="tdButtonUp">
+                <button id="updateBtn" (click)="update()" class="btn btn-info">Update Member</button>
+            </td>
+            <td id="tdButtonRem">
+                <button id="removeBtn" (click)="remove()" class="btn btn-danger">Remove</button>
+                <span *ngIf="showVerifBtn" id="tdButtonRem">
+                    <button id="removeBtn" (click)="verifyRemove()" class="btn btn-danger">Please Confirm this Delete</button>
+                </span>
+            </td>
+        </tr>
+    </table>
+</div>
+
+
+
