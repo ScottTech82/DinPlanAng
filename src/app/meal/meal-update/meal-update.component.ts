@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Meal } from '../meal.class';
 import { MealService } from '../meal.service';
 
@@ -18,6 +18,7 @@ export class MealUpdateComponent implements OnInit {
   constructor(
     private mealsvc: MealService,
     private router: Router,
+    private route: ActivatedRoute
 
   ) { }
 
@@ -49,6 +50,20 @@ export class MealUpdateComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    let id = +this.route.snapshot.params["id"];
+    this.mealsvc.get(id).subscribe({
+      next: (res) => {
+        this.meal = res;
+      },
+      error: (err) => {
+        if(err.status === 404) {
+          this.router.navigateByUrl("/misc/e404");
+        }
+        else {
+          console.error(err);
+        }
+      }
+    });
   }
 
 }
