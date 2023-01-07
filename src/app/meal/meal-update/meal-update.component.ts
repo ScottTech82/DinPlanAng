@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Meal } from '../meal.class';
 import { MealService } from '../meal.service';
 
@@ -16,23 +17,35 @@ export class MealUpdateComponent implements OnInit {
 
   constructor(
     private mealsvc: MealService,
-    
+    private router: Router,
+
   ) { }
 
   update(): void {
     this.mealsvc.change(this.meal).subscribe({
       next: (res) => {
-
+        this.router.navigateByUrl("/meal/list");
+      },
+      error: (err) => {
+        console.error(err);
       }
     })
 
   }
 
   remove(): void {
+    this.showVerifBtn = !this.showVerifBtn;
 
   }
   verifyRemove(): void {
-
+    this.mealsvc.remove(this.meal.id).subscribe({
+      next: (res) => {
+        this.router.navigateByUrl("/meal/list");
+      },
+      error: (err) => {
+        console.error(err);
+      }
+    });
   }
 
   ngOnInit(): void {
