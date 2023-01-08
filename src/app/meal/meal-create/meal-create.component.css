@@ -1,0 +1,19 @@
+#createnew{
+    width: 60% !important;
+}
+#tdButton{
+    padding-top: 20px;
+    padding-left: 35%;
+}
+#createBtn{
+    padding: 0px 25px;
+    color: black;
+}
+#note1{
+    color: rgb(25, 95, 97);
+    font-style: italic;
+}
+#cookTypeSelect{
+    width: 23%;
+
+}

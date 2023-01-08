@@ -2,7 +2,6 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { SystemService } from '../common/system.service';
-import { User } from '../user/user.class';
 import { Meal } from './meal.class';
 
 @Injectable({

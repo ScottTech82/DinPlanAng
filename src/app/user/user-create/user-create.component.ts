@@ -11,7 +11,7 @@ import { UserService } from '../user.service';
 export class UserCreateComponent implements OnInit {
 
   pageTitle: string = "Dinner Planner!";
-  subTitle: string = "Adding New Member";
+  subTitle: string = "New Member";
   user: User = new User;
 
   constructor(
