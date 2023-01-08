@@ -11,7 +11,7 @@ import { MealService } from '../meal.service';
 export class MealCreateComponent implements OnInit {
 
   pageTitle: string = "Dinner Planner!";
-  subTitle: string = "Add New Meal";
+  subTitle: string = "New Meal";
   meal: Meal = new Meal;
 
   constructor(

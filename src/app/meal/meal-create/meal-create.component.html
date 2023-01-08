@@ -19,12 +19,23 @@
         </tr>
         <tr>
             <th>Cook Time</th>
-            <td><Input [(ngModel)]="meal.cookTime" ngDefaultControl></td>
+            <td><Input [(ngModel)]="meal.cookTime" ngDefaultControl><span id="note1">*Time in hours</span></td>     
         </tr>
         <tr>
             <th>Cook Type</th>
-            <td><Input [(ngModel)]="meal.cookType" ngDefaultControl></td>
+            <td>
+                <select id="cookTypeSelect" [(ngModel)]="meal.cookType">
+                    <option>Stove Top</option>
+                    <option>Oven</option>
+                    <option>Grill</option>
+                    <option>Other</option>
+                </select>
+            </td>
         </tr>
+        
+
+            <!-- <td><Input [(ngModel)]="meal.cookType" ngDefaultControl ></td> -->
+        <!-- </tr> -->
     </table>
     <table class="table table-sm">
         <tr>
