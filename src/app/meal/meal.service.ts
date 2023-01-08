@@ -33,7 +33,7 @@ export class MealService {
     return this.http.put(`${this.baseurl}/${meal.id}`, meal) as Observable<any>;
   }
 
-  delete(id: number): Observable<any> {
+  remove(id: number): Observable<any> {
     return this.http.delete(`${this.baseurl}/${id}`) as Observable<any>;
   }
 
