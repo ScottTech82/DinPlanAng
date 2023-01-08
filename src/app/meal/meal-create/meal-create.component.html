@@ -22,6 +22,10 @@
             <td><Input [(ngModel)]="meal.cookTime" ngDefaultControl><span id="note1">*Time in hours</span></td>     
         </tr>
         <tr>
+            <th>Cook Temp</th>
+            <td><Input [(ngModel)]="meal.cookTemp" ngDefaultControl><span id="note1">*Enter 0 for N/A</span></td>     
+        </tr>
+        <tr>
             <th>Cook Type</th>
             <td>
                 <select id="cookTypeSelect" [(ngModel)]="meal.cookType">
@@ -32,10 +36,6 @@
                 </select>
             </td>
         </tr>
-        
-
-            <!-- <td><Input [(ngModel)]="meal.cookType" ngDefaultControl ></td> -->
-        <!-- </tr> -->
     </table>
     <table class="table table-sm">
         <tr>

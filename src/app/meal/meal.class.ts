@@ -6,7 +6,8 @@ export class Meal {
     type: string = "";
     description: string = "";
     cookType: string = "";
-    cookTime: number = 0;
+    cookTemp: string = "";
+    cookTime: string = "";
 
     userid!: number;
     user!: User;
