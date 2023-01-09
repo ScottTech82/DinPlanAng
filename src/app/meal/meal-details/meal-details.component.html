@@ -1,0 +1,52 @@
+<div>
+    <app-header [pageTitle]="pageTitle" [subTitle]="subTitle"></app-header>
+    <table class="table table-sm table-responsive">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Description</th>
+                <th>Cook Time</th>
+                <th>Cook Temp</th>
+                <th>Cook Type</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngIf="meal">
+                <td>{{meal.id}}</td>
+                <td>{{meal.name}}</td>
+                <td>{{meal.type}}</td>
+                <td>{{meal.description}}</td>
+                <td>{{meal.cookTime}}</td>
+                <td>{{meal.cookTemp}}</td>
+                <td>{{meal.cookType}}</td>
+            </tr>
+        </tbody>
+    </table>
+    <br>
+    <hr>
+    <br>
+    <div id="ingTable">
+        <table class="table table-sm table-responsive">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Amount</th>
+                    <th>Notes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <ng-container *ngIf="meal">
+                    <tr *ngFor="let ing of meal.ingredients">
+                        <td>{{ing.id}}</td>
+                        <td>{{ing.name}}</td>
+                        <td>{{ing.amount}}</td>
+                        <td>{{ing.notes}}</td>
+                    </tr>
+                </ng-container>
+            </tbody>
+        </table>
+    </div>
+</div>

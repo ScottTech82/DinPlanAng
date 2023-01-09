@@ -8,6 +8,7 @@ import { UserUpdateComponent } from './user/user-update/user-update.component';
 import { MealListComponent } from './meal/meal-list/meal-list.component';
 import { MealCreateComponent } from './meal/meal-create/meal-create.component';
 import { MealUpdateComponent } from './meal/meal-update/meal-update.component';
+import { MealDetailsComponent } from './meal/meal-details/meal-details.component';
 
 const routes: Routes = [
 {path: "", redirectTo: "/user/list", pathMatch: "full"},
@@ -18,6 +19,7 @@ const routes: Routes = [
 {path: "meal/list", component: MealListComponent},
 {path: "meal/create", component: MealCreateComponent},
 {path: "meal/update/:id", component: MealUpdateComponent},
+{path: "meal/details/:id", component: MealDetailsComponent},
 
 
 {path: "**", component: E404Component}

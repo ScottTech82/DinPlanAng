@@ -11,18 +11,23 @@
                 <th>Name</th>
                 <th>Type</th>
                 <th>Description</th>
-                <th>Cook Type</th>
                 <th>Cook Time</th>
+                <th>Cook Temp</th>
+                <th>Cook Type</th>
+            </tr>
+            <tr>
+                
             </tr>
         </thead>
         <tbody>
             <tr *ngFor="let m of meals">
-                <td><button id="uBtn" class="btn btn-link" (click)="update(m.id)">{{m.id}}</button></td>
-                <td><button id="uBtn" class="btn btn-link" (click)="update(m.id)">{{m.name}}</button></td>
-                <td><button id="uBtn" class="btn btn-link" (click)="update(m.id)">{{m.type}}</button></td>
-                <td><button id="uBtn" class="btn btn-link" (click)="update(m.id)">{{m.description}}</button></td>
-                <td><button id="uBtn" class="btn btn-link" (click)="update(m.id)">{{m.cookType}}</button></td>
-                <td><button id="uBtn" class="btn btn-link" (click)="update(m.id)">{{m.cookTime}}</button></td>
+                <td><button id="uBtn" class="btn btn-link" (click)="details(m.id)">{{m.id}}</button></td>
+                <td><button id="uBtn" class="btn btn-link" (click)="details(m.id)">{{m.name}}</button></td>
+                <td><button id="uBtn" class="btn btn-link" (click)="details(m.id)">{{m.type}}</button></td>
+                <td><button id="uBtn" class="btn btn-link" (click)="details(m.id)">{{m.description}}</button></td>
+                <td><button id="uBtn" class="btn btn-link" (click)="details(m.id)">{{m.cookTime}}</button></td>
+                <td><button id="uBtn" class="btn btn-link" (click)="details(m.id)">{{m.cookTemp}}</button></td>
+                <td><button id="uBtn" class="btn btn-link" (click)="details(m.id)">{{m.cookType}}</button></td>
             </tr>
         </tbody>
     </table>
