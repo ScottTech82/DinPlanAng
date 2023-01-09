@@ -1,34 +1,37 @@
 <div>
     <app-header [pageTitle]="pageTitle" [subTitle]="subTitle"></app-header>
-    <table class="table table-sm table-responsive">
+    <table class="table table-sm table-responsive table-hover">
         <thead>
             <tr>
                 <th>Id</th>
                 <th>Name</th>
                 <th>Type</th>
-                <th>Description</th>
                 <th>Cook Time</th>
                 <th>Cook Temp</th>
                 <th>Cook Type</th>
+                <th>Description</th>
             </tr>
         </thead>
         <tbody>
             <tr *ngIf="meal">
-                <td>{{meal.id}}</td>
-                <td>{{meal.name}}</td>
-                <td>{{meal.type}}</td>
-                <td>{{meal.description}}</td>
-                <td>{{meal.cookTime}}</td>
-                <td>{{meal.cookTemp}}</td>
-                <td>{{meal.cookType}}</td>
+                <td><button id="uBtn" class="btn btn-link" (click)="update(meal.id)">{{meal.id}}</button></td>
+                <td><button id="uBtn" class="btn btn-link" (click)="update(meal.id)">{{meal.name}}</button></td>
+                <td><button id="uBtn" class="btn btn-link" (click)="update(meal.id)">{{meal.type}}</button></td>
+                <td><button id="uBtn" class="btn btn-link" (click)="update(meal.id)">{{meal.cookTime}}</button></td>
+                <td><button id="uBtn" class="btn btn-link" (click)="update(meal.id)">{{meal.cookTemp}}</button></td>
+                <td><button id="uBtn" class="btn btn-link" (click)="update(meal.id)">{{meal.cookType}}</button></td>
+                <td><button id="uBtn" class="btn btn-link" (click)="update(meal.id)">{{meal.description}}</button></td>
             </tr>
         </tbody>
     </table>
-    <br>
+    <div id="updateMealBtn">
+        <button class="btn btn-outline-secondary" id="updateBtn" (click)="update(meal.id)">Update Meal</button>
+    </div>
     <hr>
+    <h4 id="IngTitle">Meal Ingredients</h4>
     <br>
     <div id="ingTable">
-        <table class="table table-sm table-responsive">
+        <table class="table table-sm table-responsive table-hover">
             <thead>
                 <tr>
                     <th>Id</th>
