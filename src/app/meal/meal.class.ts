@@ -1,3 +1,4 @@
+import { Ingredient } from "../ingredient/ingredient.class";
 import { User } from "../user/user.class";
 
 export class Meal {
@@ -9,6 +10,8 @@ export class Meal {
     cookTemp: string = "";
     cookTime: string = "";
 
+    ingredients!: Ingredient[];
+    
     userid!: number;
     user!: User;
 }

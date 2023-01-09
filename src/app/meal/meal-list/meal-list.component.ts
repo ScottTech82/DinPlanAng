@@ -19,8 +19,8 @@ export class MealListComponent implements OnInit {
     private router: Router,
   ) { }
 
-  update(id:number): void {
-    this.router.navigateByUrl(`/meal/update/${id}`);
+  details(id:number): void {
+    this.router.navigateByUrl(`/meal/details/${id}`);
   }
 
   ngOnInit(): void {
