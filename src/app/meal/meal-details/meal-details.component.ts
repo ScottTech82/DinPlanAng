@@ -21,6 +21,10 @@ export class MealDetailsComponent implements OnInit {
 
   ) { }
 
+  update(id: number): void {
+    this.router.navigateByUrl(`/meal/update/${id}`);
+  }
+
   ngOnInit(): void {
     let id = +this.route.snapshot.params["id"];
     this.mealsvc.get(id).subscribe({

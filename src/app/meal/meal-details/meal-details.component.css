@@ -1,0 +1,20 @@
+#IngTitle{
+    font-style: italic;
+    display: inline-block;
+    margin-left: 19%;
+    color: rgb(73, 124, 126);
+}
+#updateBtn{
+    padding: 0px 50px;
+
+}
+#updateMealBtn{
+    text-align: center;
+}
+#uBtn{
+    text-decoration: none;
+    color: black;
+}
+.table-hover tbody tr:hover{
+    background-color: rgb(209, 247, 253);
+}
