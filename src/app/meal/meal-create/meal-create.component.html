@@ -36,6 +36,14 @@
                 </select>
             </td>
         </tr>
+        <tr>
+            <th>User</th>
+            <td>
+                <select id="cookTypeSelect" [(ngModel)]="meal.userid">
+                    <option *ngFor="let u of user" [ngValue]="u.id">{{u.username}}</option>
+                </select>
+            </td>
+        </tr>
     </table>
     <table class="table table-sm">
         <tr>
