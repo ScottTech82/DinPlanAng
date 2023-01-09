@@ -17,7 +17,7 @@ const routes: Routes = [
 {path: "user/update/:id", component: UserUpdateComponent},
 {path: "meal/list", component: MealListComponent},
 {path: "meal/create", component: MealCreateComponent},
-{path: "meal/update", component: MealUpdateComponent},
+{path: "meal/update/:id", component: MealUpdateComponent},
 
 
 {path: "**", component: E404Component}

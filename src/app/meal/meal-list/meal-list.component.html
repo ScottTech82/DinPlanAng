@@ -17,12 +17,12 @@
         </thead>
         <tbody>
             <tr *ngFor="let m of meals">
-                <td><button id="uBtn" class="btn btn-link" (click)="(m.id)">{{m.id}}</button></td>
-                <td><button id="uBtn" class="btn btn-link" (click)="(m.id)">{{m.name}}</button></td>
-                <td><button id="uBtn" class="btn btn-link" (click)="(m.id)">{{m.type}}</button></td>
-                <td><button id="uBtn" class="btn btn-link" (click)="(m.id)">{{m.description}}</button></td>
-                <td><button id="uBtn" class="btn btn-link" (click)="(m.id)">{{m.cookType}}</button></td>
-                <td><button id="uBtn" class="btn btn-link" (click)="(m.id)">{{m.cookTime}}</button></td>
+                <td><button id="uBtn" class="btn btn-link" (click)="update(m.id)">{{m.id}}</button></td>
+                <td><button id="uBtn" class="btn btn-link" (click)="update(m.id)">{{m.name}}</button></td>
+                <td><button id="uBtn" class="btn btn-link" (click)="update(m.id)">{{m.type}}</button></td>
+                <td><button id="uBtn" class="btn btn-link" (click)="update(m.id)">{{m.description}}</button></td>
+                <td><button id="uBtn" class="btn btn-link" (click)="update(m.id)">{{m.cookType}}</button></td>
+                <td><button id="uBtn" class="btn btn-link" (click)="update(m.id)">{{m.cookTime}}</button></td>
             </tr>
         </tbody>
     </table>

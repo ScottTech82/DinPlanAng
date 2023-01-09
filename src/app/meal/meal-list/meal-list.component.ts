@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Meal } from '../meal.class';
+import { MealService } from '../meal.service';
 
 @Component({
   selector: 'app-meal-list',
@@ -12,9 +14,24 @@ export class MealListComponent implements OnInit {
   subTitle: string = " - Meal List -";
   meals: Meal[] = [];
 
-  constructor() { }
+  constructor(
+    private mealsvc: MealService,
+    private router: Router,
+  ) { }
+
+  update(id:number): void {
+    this.router.navigateByUrl(`/meal/update/${id}`);
+  }
 
   ngOnInit(): void {
+    this.mealsvc.list().subscribe({
+      next: (res) => {
+        this.meals = res;
+      },
+      error: (err) => {
+        console.error(err);
+      }
+    });
   }
 
 }

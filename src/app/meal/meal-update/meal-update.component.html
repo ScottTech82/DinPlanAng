@@ -1,6 +1,6 @@
 <div>
     <app-header [pageTitle]="pageTitle" [subTitle]="subTitle"></app-header>
-    <table class="table table-sm" id="updateTable">
+    <table class="table table-sm" id="updateTable" *ngIf="meal">
         <tr>
             <th>Id</th>
             <td><Input [(ngModel)]="meal.id" type="number" disabled ngDefaultControl></td>
@@ -30,7 +30,7 @@
         <tr>
             <th></th>
             <td id="tdButtonUp">
-                <button id="updateBtn" (click)="update()" class="btn btn-info">Update Member</button>
+                <button id="updateBtn" (click)="update()" class="btn btn-info">Update Meal</button>
             </td>
             <td id="tdButtonRem">
                 <button id="removeBtn" (click)="remove()" class="btn btn-danger">Remove</button>

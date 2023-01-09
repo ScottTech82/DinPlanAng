@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { User } from 'src/app/user/user.class';
+import { UserService } from 'src/app/user/user.service';
 import { Meal } from '../meal.class';
 import { MealService } from '../meal.service';
 
@@ -13,11 +15,13 @@ export class MealCreateComponent implements OnInit {
   pageTitle: string = "Dinner Planner!";
   subTitle: string = "New Meal";
   meal: Meal = new Meal;
+  user: User[] = [];
 
   constructor(
     private mealsvc: MealService,
     private router: Router,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private usersvc: UserService,
   ) { }
 
   add(): void {
@@ -28,11 +32,19 @@ export class MealCreateComponent implements OnInit {
       error: (err) => {
         console.error(err);
       }
-    })
+    });
     
   }
 
   ngOnInit(): void {
+    this.usersvc.list().subscribe({
+      next: (res) => {
+        this.user = res;
+      },
+      error: (err) => {
+        console.error(err);
+      }
+    });
   }
 
 }
