@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Ingredient } from '../ingredient.class';
 
 @Component({
@@ -13,8 +14,13 @@ export class IngListComponent implements OnInit {
   ings: Ingredient[] = [];
 
   constructor(
-    
+    private router: Router,
+
   ) { }
+
+  details(id:number): void {
+    this.router.navigateByUrl("/ingredient/update");
+  }
 
   ngOnInit(): void {
   }
