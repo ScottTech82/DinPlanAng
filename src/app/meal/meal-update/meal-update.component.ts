@@ -49,6 +49,12 @@ export class MealUpdateComponent implements OnInit {
     });
   }
 
+  clickAnyWhere(): void {
+    if(this.showVerifBtn === true) {
+      this.showVerifBtn = false;
+    }
+  }
+
   ngOnInit(): void {
     let id = +this.route.snapshot.params["id"];
     this.mealsvc.get(id).subscribe({
