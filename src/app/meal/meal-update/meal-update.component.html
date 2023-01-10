@@ -1,5 +1,8 @@
 <div>
+    <div (click)="clickAnyWhere()">
     <app-header [pageTitle]="pageTitle" [subTitle]="subTitle"></app-header>
+    </div>
+    <div (click)="clickAnyWhere()">
     <table class="table table-sm" id="updateTable" *ngIf="meal">
         <tr>
             <th>Id</th>
@@ -30,10 +33,11 @@
             <td><Input [(ngModel)]="meal.cookType" ngDefaultControl></td>
         </tr>
     </table>
+    </div>
     <table class="table table-sm" id="updateBtnTable">
         <tr>
             <th></th>
-            <td id="tdButtonUp">
+            <td id="tdButtonUp" (click)="clickAnyWhere()">
                 <button id="updateBtn" (click)="update()" class="btn btn-info">Update Meal</button>
             </td>
             <td id="tdButtonRem">

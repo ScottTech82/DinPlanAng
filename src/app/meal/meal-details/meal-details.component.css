@@ -1,7 +1,8 @@
 #IngTitle{
     font-style: italic;
-    display: inline-block;
-    margin-left: 19%;
+    display: inline-table;
+    width: 50%;
+    margin-left: 19.5%;
     color: rgb(73, 124, 126);
 }
 #updateBtn{
@@ -17,4 +18,17 @@
 }
 .table-hover tbody tr:hover{
     background-color: rgb(209, 247, 253);
+}
+#mealTable{
+    margin-left: 20%;
+    width: 60%;
+}
+#ingTable{
+    margin-left: 20%;
+    width: 60%;
+}
+#note{
+    padding-left: 55%;
+    color: rgb(25, 95, 97);
+    font-style: italic;
 }
