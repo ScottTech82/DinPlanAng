@@ -1,1 +1,25 @@
-<p>ing-list works!</p>
+<div class="row justify-content-center">
+    <app-header [pageTitle]="pageTitle" [subTitle]="subTitle"></app-header>
+    <table>
+        <a routerLink="/user/create" id="create">Add Member</a>
+        <span id="note">*You can click on a family member to update or delete.</span>
+    </table>
+    <table class="table table-sm table-hover table-responsive col-auto" id="usertable">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Measurement</th>
+                <th>Notes</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let i of ings">
+                <td><button id="uBtn" class="btn btn-link" (click)="details(i.id)">{{i.id}}</button></td>
+                <td><button id="uBtn" class="btn btn-link" (click)="details(i.id)">{{i.name}}</button></td>
+                <td><button id="uBtn" class="btn btn-link" (click)="details(i.id)">{{i.amount}}</button></td>
+                <td><button id="uBtn" class="btn btn-link" (click)="details(i.id)">{{i.notes}}</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
