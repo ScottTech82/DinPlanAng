@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Ingredient } from '../ingredient.class';
 
 @Component({
   selector: 'app-ing-list',
@@ -7,7 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class IngListComponent implements OnInit {
 
-  constructor() { }
+  pageTitle: string = "Dinner Planner!";
+  subTitle: string = " - Ingredient List -";
+  ings: Ingredient[] = [];
+
+  constructor(
+    
+  ) { }
 
   ngOnInit(): void {
   }
