@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Ingredient } from '../ingredient.class';
+import { IngredientService } from '../ingredient.service';
 
 @Component({
   selector: 'app-ing-list',
@@ -15,7 +16,7 @@ export class IngListComponent implements OnInit {
 
   constructor(
     private router: Router,
-
+    private ingsvc: IngredientService,
   ) { }
 
   details(id:number): void {
@@ -23,6 +24,14 @@ export class IngListComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.ingsvc.list().subscribe({
+      next: (res) => {
+        this.ings = res;
+      },
+      error: (err) => {
+        console.error(err);
+      }
+    });
   }
 
 }
