@@ -1,0 +1,24 @@
+#ingTable{
+    width: 70% !important;
+    margin-left: 10%;
+    margin-top: 1%;
+}
+.table-hover tbody tr:hover{
+    background-color: rgb(209, 247, 253);
+}
+#create{
+    color:rgb(34, 100, 102);
+    margin-left: 22%;
+}
+#create:hover{
+    color:green;
+}
+#uBtn{
+    text-decoration: none;
+    color: black;
+}
+#note{
+    padding-left: 30%;
+    color: rgb(25, 95, 97);
+    font-style: italic;
+}

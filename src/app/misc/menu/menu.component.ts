@@ -17,7 +17,8 @@ export class MenuComponent implements OnInit {
 
     new Menu("Users", "/user/list"),
     new Menu("Meals", "/meal/list"),
-    new Menu("Ingredients", "/ingredient/list"),
+    new Menu("Ingredients", "/ing/list"),
+   
 
     
   ];
@@ -28,6 +29,8 @@ export class MenuComponent implements OnInit {
   collapseMenu(): void {
     this.seemenu = !this.seemenu;
   }
+
+
 
   constructor(
     private sys: SystemService,

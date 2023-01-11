@@ -1,0 +1,8 @@
+#darkToggle{
+    padding: 0px 5px;
+    margin-top: 1%;
+    margin-left: 3%;
+}
+#darkToggle:hover{
+    background-color: rgb(73, 73, 72);
+}
