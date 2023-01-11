@@ -20,7 +20,6 @@ export class MealCreateComponent implements OnInit {
   constructor(
     private mealsvc: MealService,
     private router: Router,
-    private route: ActivatedRoute,
     private usersvc: UserService,
   ) { }
 

@@ -1,1 +1,31 @@
-<p>ing-create works!</p>
+<div class="row justify-content-center">
+    <app-header [pageTitle]="pageTitle" [subTitle]="subTitle"></app-header>
+    <table class="table table-sm table-responsive col-auto" id="createnew">
+        <tr>
+            <th>Id</th>
+            <td><Input [(ngModel)]="ing.id" type="number" disabled ngDefaultControl></td>
+        </tr>
+        <tr>
+            <th>Name</th>
+            <td><Input [(ngModel)]="ing.name" ngDefaultControl></td>
+        </tr>
+        <tr>
+            <th>Amount</th>
+            <td><Input [(ngModel)]="ing.amount" ngDefaultControl></td>
+        </tr>
+        <tr>
+            <th>Notes</th>
+            <td><Input [(ngModel)]="ing.notes" ngDefaultControl></td>
+        </tr>
+    </table>
+    <table class="table table-sm">
+        <tr>
+            <th></th>
+            <td id="tdButton">
+                <button id="createBtn" (click)="add()" class="btn btn-primary">Add Ingredient</button>
+            </td>
+        </tr>
+    </table>
+</div>
+
+
