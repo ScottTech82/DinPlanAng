@@ -23,6 +23,14 @@ export class IngredientService {
   get(id: number): Observable<Ingredient> {
     return this.http.get(`${this.baseurl}/${id}`) as Observable<Ingredient>;
   }
-  create()
+  create(ingredient: Ingredient): Observable<Ingredient> {
+    return this.http.post(`${this.baseurl}`, ingredient) as Observable<Ingredient>;
+  }
+  change(id: number, ingredient: Ingredient): Observable<any> {
+    return this.http.put(`${this.baseurl}/${id}`, ingredient) as Observable<any>;
+  }
+  remove(id: number): Observable<any> {
+    
+  }
 
 }
