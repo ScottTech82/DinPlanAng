@@ -28,8 +28,11 @@ export class MealDetailsComponent implements OnInit {
   }
   print(): void {
     /*window.print();*/
+    window.open(`./meal/print/${this.meal.id}`, '_blank');
+    window.focus();
     
-    this.router.navigateByUrl("/meal/print");
+    /* this.router.navigateByUrl("/meal/print");*/
+    
     /*
     var divToPrint = document.getElementById('meal-detail');
     var newWin = window.open('', 'Print-Window');

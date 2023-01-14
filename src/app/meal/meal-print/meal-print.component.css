@@ -1,0 +1,37 @@
+#IngTitle{
+    font-style: italic;
+    display: inline-table;
+    width: 60%;
+    margin-left: 10%;
+    color: rgb(73, 124, 126);
+}
+#MealTitle{
+    font-style: italic;
+    display: inline-table;
+    width: 60%;
+    margin-left: 10%;
+    color: rgb(73, 124, 126);
+}
+#printBtn{
+    padding: 0px 30px;
+    color: black;
+    border-color: rgb(197, 195, 195);
+}
+#printBtn:hover{
+    color: black;
+    background-color: rgb(160, 160, 160);
+}
+#mealTable{
+    margin-left: 10%;
+    width: 80%;
+    border-color: white;
+    margin-top: 2%;
+}
+#ingTable{
+    margin-left: 10%;
+    width: 80%;
+    border-color: white;
+}
+
+    
+    
