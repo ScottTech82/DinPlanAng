@@ -1,1 +1,54 @@
-<p>meal-print works!</p>
+<div>
+    <div>
+        <div>
+            <br>
+            <h4 id="MealTitle">Meal</h4>
+            <span><button class="btn btn-outline-secondary" id="printBtn" (click)="print()">Print</button></span>
+            <br>
+        </div>
+    <table class="table table-sm table-responsive" id="mealTable">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Cook Time</th>
+                <th>Cook Temp</th>
+                <th>Cook Type</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngIf="meal">
+                <td>{{meal.name}}</td>
+                <td>{{meal.type}}</td>
+                <td>{{meal.cookTime}}</td>
+                <td>{{meal.cookTemp}}</td>
+                <td>{{meal.cookType}}</td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+<div>
+    <br>
+    <h4 id="IngTitle">Ingredients</h4>
+    <br>
+        <table class="table table-sm table-responsive" id="ingTable">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Amount</th>
+                    <th>Notes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <ng-container *ngIf="meal">
+                    <tr *ngFor="let ing of meal.ingredients">
+                        <td>{{ing.name}}</td>
+                        <td>{{ing.amount}}</td>
+                        <td>{{ing.notes}}</td>
+                    </tr>
+                </ng-container>
+            </tbody>
+        </table>
+    </div>
+</div>
+
