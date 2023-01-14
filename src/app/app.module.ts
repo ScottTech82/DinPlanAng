@@ -19,6 +19,7 @@ import { MealUpdateComponent } from './meal/meal-update/meal-update.component';
 import { MealDetailsComponent } from './meal/meal-details/meal-details.component';
 import { IngListComponent } from './ingredient/ing-list/ing-list.component';
 import { IngCreateComponent } from './ingredient/ing-create/ing-create.component';
+import { MealPrintComponent } from './meal/meal-print/meal-print.component';
 
 export function startupServiceFactory(appInit: AppInitService): Function {
   return () => appInit.getSettings();
@@ -39,7 +40,8 @@ export function startupServiceFactory(appInit: AppInitService): Function {
     MealUpdateComponent,
     MealDetailsComponent,
     IngListComponent,
-    IngCreateComponent
+    IngCreateComponent,
+    MealPrintComponent
   ],
   imports: [
     BrowserModule,
