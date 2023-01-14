@@ -7,10 +7,11 @@
 }
 #updateBtn{
     padding: 0px 50px;
-
+    color: black;
 }
 #updateMealBtn{
     text-align: center;
+    
 }
 #uBtn{
     text-decoration: none;
@@ -31,4 +32,17 @@
     padding-left: 55%;
     color: rgb(25, 95, 97);
     font-style: italic;
+}
+#addIngBtn{
+    padding: 0px 15px;
+    margin-top: 3%;
+    color: black;
+    background-color: rgb(235, 234, 234);
+}
+#addIngBtn:hover{
+    background-color: rgb(124, 123, 123);
+    color: white;
+}
+#addIng:hover{
+    background-color: white;
 }

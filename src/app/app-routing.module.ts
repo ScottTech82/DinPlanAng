@@ -13,7 +13,7 @@ import { IngListComponent } from './ingredient/ing-list/ing-list.component';
 import { IngCreateComponent } from './ingredient/ing-create/ing-create.component';
 
 const routes: Routes = [
-{path: "", redirectTo: "/user/list", pathMatch: "full"},
+{path: "", redirectTo: "/meal/list", pathMatch: "full"},
 
 {path: "user/list", component: UserListComponent},
 {path: "user/create", component: UserCreateComponent},

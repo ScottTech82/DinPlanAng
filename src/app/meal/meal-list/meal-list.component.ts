@@ -11,7 +11,7 @@ import { MealService } from '../meal.service';
 export class MealListComponent implements OnInit {
 
   pageTitle: string = "Dinner Planner!";
-  subTitle: string = " - Meal List -";
+  subTitle: string = " - Family Meal List -";
   meals: Meal[] = [];
 
   constructor(

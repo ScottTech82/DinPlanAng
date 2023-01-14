@@ -4,4 +4,5 @@ export class Ingredient {
     amount: string = "";
     notes: string = "";
 
+    
 }

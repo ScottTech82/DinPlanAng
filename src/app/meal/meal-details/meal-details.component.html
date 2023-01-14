@@ -31,7 +31,7 @@
         <button class="btn btn-outline-secondary" id="updateBtn" (click)="update(meal.id)">Update Meal</button>
     </div>
     <br>
-    <h4 id="IngTitle">Meal Ingredients</h4>
+    <h4 id="IngTitle">Ingredients</h4>
     <br>
     <div>
         <table class="table table-sm table-responsive table-hover" id="ingTable">
@@ -50,6 +50,9 @@
                         <td>{{ing.name}}</td>
                         <td>{{ing.amount}}</td>
                         <td>{{ing.notes}}</td>
+                    </tr>
+                    <tr id="addIng">
+                        <button id="addIngBtn" class="btn btn-outline-secondary" (click)="addIng()">Add Ingredient</button>
                     </tr>
                 </ng-container>
             </tbody>
