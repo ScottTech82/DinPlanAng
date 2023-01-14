@@ -7,11 +7,27 @@
 }
 #updateBtn{
     padding: 0px 50px;
+    color: rgb(110, 110, 110);
+    border-color: white;
+    border-radius: 30%;
+}
+#updateBtn:hover{
     color: black;
+    background-color: rgb(160, 160, 160);
 }
 #updateMealBtn{
     text-align: center;
     
+}
+#printBtn{
+    padding: 0px 60px;
+    color: rgb(110, 110, 110);
+    border-color: white;
+    border-radius: 30%;
+}
+#printBtn:hover{
+    color: black;
+    background-color: rgb(160, 160, 160);
 }
 #uBtn{
     text-decoration: none;

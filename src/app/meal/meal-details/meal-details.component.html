@@ -3,6 +3,7 @@
     <div>
         <span id="note">*You can click on the meal to update it or click the button.</span>
     </div>
+    <div id="meal-detail">
     <table class="table table-sm table-responsive table-hover" id="mealTable">
         <thead>
             <tr>
@@ -29,6 +30,9 @@
     </table>
     <div id="updateMealBtn">
         <button class="btn btn-outline-secondary" id="updateBtn" (click)="update(meal.id)">Update Meal</button>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button class="btn btn-outline-secondary" id="printBtn" (click)="print()">Print Meal</button>
     </div>
     <br>
     <h4 id="IngTitle">Ingredients</h4>
@@ -57,5 +61,6 @@
                 </ng-container>
             </tbody>
         </table>
+    </div>
     </div>
 </div>
