@@ -26,6 +26,13 @@ export class MealDetailsComponent implements OnInit {
   update(id: number): void {
     this.router.navigateByUrl(`/meal/update/${id}`);
   }
+  print(): void {
+    var divToPrint = document.getElementById('meal-detail');
+    var newWin = window.open('', 'Print-Window');
+    newWin?.document.open();
+    newWin?.document.write('<html><link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" media="print"/><body onload="window.print()">' + divToPrint?.innerHTML + '</body></html>');
+    newWin?.document.close();
+  }
 
   addIng(): void {
     this.sys.meal = this.meal;
