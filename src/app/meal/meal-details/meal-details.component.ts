@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { SystemService } from 'src/app/common/system.service';
 import { Meal } from '../meal.class';
 import { MealService } from '../meal.service';
 
@@ -18,6 +19,7 @@ export class MealDetailsComponent implements OnInit {
     private mealsvc: MealService,
     private router: Router,
     private route: ActivatedRoute,
+    private sys: SystemService
 
   ) { }
 
@@ -26,6 +28,7 @@ export class MealDetailsComponent implements OnInit {
   }
 
   addIng(): void {
+    this.sys.meal = this.meal;
     this.router.navigateByUrl("/ing/create");
   }
 

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { SystemService } from 'src/app/common/system.service';
+import { Meal } from 'src/app/meal/meal.class';
 import { Ingredient } from '../ingredient.class';
 import { IngredientService } from '../ingredient.service';
 
@@ -13,14 +15,17 @@ export class IngCreateComponent implements OnInit {
   pageTitle: string = "Dinner Planner!";
   subTitle: string = "New Ingredient";
   ing: Ingredient = new Ingredient;
-  
+  meal!: Meal;
 
   constructor(
     private ingsvc: IngredientService,
     private router: Router,
+    private sys: SystemService
   ) { }
 
   add(): void {
+    let id = this.sys.meal.id;
+    this.ing.mealId = id;
     this.ingsvc.create(this.ing).subscribe({
       next: (res) => {
         this.router.navigateByUrl("/ing/list");
@@ -32,6 +37,7 @@ export class IngCreateComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.meal = this.sys.meal;
   }
 
 }

@@ -10,6 +10,7 @@ export class SystemService {
   baseurl: string = this.appInit.config.baseurl;
 
   user: any = null;
+  meal: any = null;
 
   constructor(
     private router: Router,
