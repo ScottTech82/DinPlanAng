@@ -24,11 +24,11 @@ export class IngCreateComponent implements OnInit {
   ) { }
 
   add(): void {
-    let id = this.sys.meal.id;
+    let id = this.meal.id;
     this.ing.mealId = id;
     this.ingsvc.create(this.ing).subscribe({
       next: (res) => {
-        this.router.navigateByUrl("/ing/list");
+        this.router.navigateByUrl(`/meal/details/${this.meal.id}`);
       },
       error: (err) => {
         console.error(err);
