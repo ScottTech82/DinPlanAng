@@ -27,11 +27,16 @@ export class MealDetailsComponent implements OnInit {
     this.router.navigateByUrl(`/meal/update/${id}`);
   }
   print(): void {
+    /*window.print();*/
+    
+    this.router.navigateByUrl("/meal/print");
+    /*
     var divToPrint = document.getElementById('meal-detail');
     var newWin = window.open('', 'Print-Window');
     newWin?.document.open();
-    newWin?.document.write('<html><link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" media="print"/><body onload="window.print()">' + divToPrint?.innerHTML + '</body></html>');
+    newWin?.document.write('<html><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" media="print"\><body onload="window.print()">' + divToPrint?.innerHTML + '</body></html>');
     newWin?.document.close();
+    */
   }
 
   addIng(): void {
