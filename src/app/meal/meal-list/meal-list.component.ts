@@ -13,6 +13,7 @@ export class MealListComponent implements OnInit {
   pageTitle: string = "Dinner Planner!";
   subTitle: string = " - Family Meal List -";
   meals: Meal[] = [];
+  darkmode: boolean = false;
 
   constructor(
     private mealsvc: MealService,

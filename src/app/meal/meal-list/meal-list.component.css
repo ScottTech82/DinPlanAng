@@ -26,3 +26,8 @@
     color: rgb(25, 95, 97);
     font-style: italic;
 }
+#darkmode{
+    background-color: black;
+    color: white;
+    
+}
