@@ -12,6 +12,7 @@ import { MealDetailsComponent } from './meal/meal-details/meal-details.component
 import { IngListComponent } from './ingredient/ing-list/ing-list.component';
 import { IngCreateComponent } from './ingredient/ing-create/ing-create.component';
 import { MealPrintComponent } from './meal/meal-print/meal-print.component';
+import { IngUpdateComponent } from './ingredient/ing-update/ing-update.component';
 
 const routes: Routes = [
 {path: "", redirectTo: "/meal/list", pathMatch: "full"},
@@ -25,6 +26,7 @@ const routes: Routes = [
 {path: "meal/details/:id", component: MealDetailsComponent},
 {path: "ing/list", component: IngListComponent},
 {path: "ing/create", component: IngCreateComponent},
+{path: "ing/update/:id", component: IngUpdateComponent},
 {path: "meal/print/:id", component: MealPrintComponent},
 
 

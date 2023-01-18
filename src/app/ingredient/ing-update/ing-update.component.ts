@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { SystemService } from 'src/app/common/system.service';
+import { Meal } from 'src/app/meal/meal.class';
 import { Ingredient } from '../ingredient.class';
 import { IngredientService } from '../ingredient.service';
 
@@ -14,17 +16,19 @@ export class IngUpdateComponent implements OnInit {
   subTitle: string = "Update Ingredient";
   showVerifBtn: boolean = false;
   ing!: Ingredient;
+  meal!: Meal;
 
   constructor(
     private ingsvc: IngredientService,
     private route: ActivatedRoute,
     private router: Router,
+    private sys: SystemService
   ) { }
 
   update(): void {
     this.ingsvc.change(this.ing).subscribe({
       next: (res) => {
-        this.router.navigateByUrl(`/meal/detail/${this.ing.mealId}`);
+        this.router.navigateByUrl(`/meal/details/${this.ing.mealId}`);
       },
       error: (err) => {
         console.error(err);
@@ -40,7 +44,7 @@ export class IngUpdateComponent implements OnInit {
   verifyRemove(): void {
     this.ingsvc.remove(this.ing.id).subscribe({
       next: (res) => {
-        this.router.navigateByUrl(`/meal/detail/${this.ing.mealId}`);
+        this.router.navigateByUrl(`/meal/details/${this.ing.mealId}`);
       },
       error: (err) => {
         console.error(err);
@@ -69,6 +73,7 @@ export class IngUpdateComponent implements OnInit {
         }
       }
     });
+    this.meal = this.sys.meal;
   }
 
 }
