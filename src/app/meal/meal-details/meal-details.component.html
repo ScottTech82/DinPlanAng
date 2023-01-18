@@ -51,9 +51,9 @@
                 <ng-container *ngIf="meal">
                     <tr *ngFor="let ing of meal.ingredients">
                         <!-- <td>{{ing.id}}</td> -->
-                        <td>{{ing.name}}</td>
-                        <td>{{ing.amount}}</td>
-                        <td>{{ing.notes}}</td>
+                        <td><button id="uBtn" class="btn btn-link" (click)="updateIng(ing.id)">{{ing.name}}</button></td>
+                        <td><button id="uBtn" class="btn btn-link" (click)="updateIng(ing.id)">{{ing.amount}}</button></td>
+                        <td><button id="uBtn" class="btn btn-link" (click)="updateIng(ing.id)">{{ing.notes}}</button></td>
                     </tr>
                     <tr id="addIng">
                         <button id="addIngBtn" class="btn btn-outline-secondary" (click)="addIng()">Add Ingredient</button>

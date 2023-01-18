@@ -26,6 +26,9 @@ export class MealDetailsComponent implements OnInit {
   update(id: number): void {
     this.router.navigateByUrl(`/meal/update/${id}`);
   }
+  updateIng(id:number): void {
+    this.router.navigateByUrl(`/ing/update/${id}`);
+  }
   print(): void {
     /*window.print();*/
     window.open(`./meal/print/${this.meal.id}`, '_blank');

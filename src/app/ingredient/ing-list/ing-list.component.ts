@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { SystemService } from 'src/app/common/system.service';
 import { Ingredient } from '../ingredient.class';
 import { IngredientService } from '../ingredient.service';
 
@@ -17,10 +18,12 @@ export class IngListComponent implements OnInit {
   constructor(
     private router: Router,
     private ingsvc: IngredientService,
+    private sys: SystemService
   ) { }
 
   details(id:number): void {
-    this.router.navigateByUrl("/ingredient/update");
+    this.sys.meal = 
+    this.router.navigateByUrl(`/ing/update/${id}`);
   }
 
   ngOnInit(): void {
