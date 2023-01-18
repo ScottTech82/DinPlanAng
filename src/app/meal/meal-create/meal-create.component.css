@@ -17,3 +17,12 @@
     width: 23%;
 
 }
+#cookNotes{
+    /*inline-size: min-content;*/
+    /*overflow-wrap: break-word;*/
+    word-wrap: normal;
+    height: 100px;
+    width: 40%;
+    border-radius: 5%;
+    overflow:auto;
+}
