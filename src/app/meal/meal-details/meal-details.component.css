@@ -64,9 +64,10 @@
 }
 #cookNotes{
     border-color: grey;
-    height: min-content;
+    height: 200px;
     width: 90%;
     resize: none;
+    color: black;
 }
 textarea{
     border: solid 1px white !important;
