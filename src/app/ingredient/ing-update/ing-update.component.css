@@ -1,0 +1,28 @@
+#updateTable{
+    width: 60% !important;
+    margin-left: 20%;
+}
+#tdButtonUp{
+    width: 30%;
+    padding-top: 20px;
+    
+}
+#tdButtonRem{
+    width: 50%;
+    padding-top: 20px;
+    padding-left: 10%;
+    
+}
+#updateBtnTable{
+    display: inline-table;
+    margin-left: 0%;
+}
+#removeBtn{
+    color: black;
+    padding: 0px 30px;
+}
+#updateBtn{
+    color: black;
+    padding: 0px 20px;
+}
+
