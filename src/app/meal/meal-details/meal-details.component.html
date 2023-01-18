@@ -61,6 +61,16 @@
                 </ng-container>
             </tbody>
         </table>
+        <br>
+        <br>
+        <h4 id="IngTitle">Cooking Description</h4>
+        <table *ngIf="meal" id="ingTable">
+            <tr id="rowCookNotes">
+                <td>
+                    <textarea id="cookNotes">{{meal.cookNotes}}</textarea>
+                </td>
+            </tr>
+        </table>
     </div>
     </div>
 </div>
