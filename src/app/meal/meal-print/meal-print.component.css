@@ -32,6 +32,15 @@
     width: 80%;
     border-color: white;
 }
+#cookNotes{
+    border-color: grey;
+    height: min-content;
+    width: 90%;
+    resize: none;
+}
+textarea{
+    border: solid 1px white !important;
+}
 
     
     
