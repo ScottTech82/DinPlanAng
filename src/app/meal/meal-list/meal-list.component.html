@@ -13,7 +13,6 @@
                 <th>Cook Time</th>
                 <th>Cook Temp</th>
                 <th>Cook Type</th>
-                <th>Description</th>
             </tr>
         </thead>
         <tbody>
@@ -24,11 +23,11 @@
                 <td><button id="uBtn" class="btn btn-link" (click)="details(m.id)">{{m.cookTime}}</button></td>
                 <td><button id="uBtn" class="btn btn-link" (click)="details(m.id)">{{m.cookTemp}}</button></td>
                 <td><button id="uBtn" class="btn btn-link" (click)="details(m.id)">{{m.cookType}}</button></td>
-                <td><button id="uBtn" class="btn btn-link" (click)="details(m.id)">{{m.description}}</button></td>
             </tr>
         </tbody>
     </table>
 </div>
+
 <div *ngIf="darkmode === true" id="darkmode" class="row justify-content-center">
     <app-header [pageTitle]="pageTitle" [subTitle]="subTitle"></app-header>
     <table>
@@ -44,7 +43,6 @@
                 <th>Cook Time</th>
                 <th>Cook Temp</th>
                 <th>Cook Type</th>
-                <th>Description</th>
             </tr>
         </thead>
         <tbody>
@@ -55,7 +53,6 @@
                 <td><button id="uBtn" class="btn btn-link" (click)="details(m.id)">{{m.cookTime}}</button></td>
                 <td><button id="uBtn" class="btn btn-link" (click)="details(m.id)">{{m.cookTemp}}</button></td>
                 <td><button id="uBtn" class="btn btn-link" (click)="details(m.id)">{{m.cookType}}</button></td>
-                <td><button id="uBtn" class="btn btn-link" (click)="details(m.id)">{{m.description}}</button></td>
             </tr>
         </tbody>
     </table>

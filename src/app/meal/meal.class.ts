@@ -5,10 +5,10 @@ export class Meal {
     id: number = 0;
     name: string = "";
     type: string = "";
-    description: string = "";
     cookType: string = "";
     cookTemp: string = "";
     cookTime: string = "";
+    cookNotes: string = "";
 
     ingredients!: Ingredient[];
     

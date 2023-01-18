@@ -6,28 +6,28 @@
     color: rgb(73, 124, 126);
 }
 #updateBtn{
-    padding: 0px 50px;
+    padding: 0px 40px;
     color: rgb(110, 110, 110);
     border-color: white;
-    border-radius: 30%;
+    border-radius: 20%;
 }
 #updateBtn:hover{
     color: black;
-    background-color: rgb(160, 160, 160);
+    background-color: rgb(87, 137, 230);
 }
 #updateMealBtn{
     text-align: center;
     
 }
 #printBtn{
-    padding: 0px 60px;
+    padding: 0px 30px;
     color: rgb(110, 110, 110);
     border-color: white;
-    border-radius: 30%;
+    border-radius: 20%;
 }
 #printBtn:hover{
     color: black;
-    background-color: rgb(160, 160, 160);
+    background-color: rgb(87, 137, 230);
 }
 #uBtn{
     text-decoration: none;

@@ -11,11 +11,7 @@
         </tr>
         <tr>
             <th>Type of Meal</th>
-            <td><Input [(ngModel)]="meal.type" ngDefaultControl></td>
-        </tr>
-        <tr>
-            <th>Description</th>
-            <td><Input [(ngModel)]="meal.description" ngDefaultControl></td>
+            <td><Input [(ngModel)]="meal.type" ngDefaultControl><span id="note1">*Classic, Italian, Asian, etc.</span></td>
         </tr>
         <tr>
             <th>Cook Time</th>
@@ -44,6 +40,10 @@
                 </select>
             </td>
         </tr>
+        <tr>
+            <th>Cooking Notes</th>
+            <td><textarea [(ngModel)]="meal.cookNotes" ngDefaultControl id="cookNotes" maxlength="255" wrap="soft"></textarea></td>
+        </tr>
     </table>
     <table class="table table-sm">
         <tr>
@@ -54,4 +54,3 @@
         </tr>
     </table>
 </div>
-
