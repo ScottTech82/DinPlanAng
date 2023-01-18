@@ -1,0 +1,43 @@
+<div>
+    <div (click)="clickAnyWhere()">
+    <app-header [pageTitle]="pageTitle" [subTitle]="subTitle"></app-header>
+    </div>
+    <div (click)="clickAnyWhere()">
+    <table class="table table-sm" id="updateTable" *ngIf="ing">
+        <tr>
+            <th>Id</th>
+            <td><Input [(ngModel)]="ing.id" type="number" disabled ngDefaultControl></td>
+        </tr>
+        <tr>
+            <th>Name</th>
+            <td><Input [(ngModel)]="ing.name" ngDefaultControl></td>
+        </tr>
+        <tr>
+            <th>Amount</th>
+            <td><Input [(ngModel)]="ing.amount" ngDefaultControl></td>
+        </tr>
+        <tr>
+            <th>Notes</th>
+            <td><Input [(ngModel)]="ing.notes" ngDefaultControl></td>
+        </tr>
+    </table>
+    </div>
+    <table class="table table-sm" id="updateBtnTable">
+        <tr>
+            <th></th>
+            <td id="tdButtonUp" (click)="clickAnyWhere()">
+                <button id="updateBtn" (click)="update()" class="btn btn-info">Update Meal</button>
+            </td>
+            <td id="tdButtonRem">
+                <button id="removeBtn" (click)="remove()" class="btn btn-danger">Remove</button>
+                <span *ngIf="showVerifBtn" id="tdButtonRem">
+                    <button id="removeBtn" (click)="verifyRemove()" class="btn btn-danger">Please Confirm this Delete</button>
+                </span>
+            </td>
+        </tr>
+    </table>
+</div>
+
+
+
+
