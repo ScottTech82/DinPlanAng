@@ -25,4 +25,11 @@
     color: black;
     padding: 0px 20px;
 }
+#cookNotes{
+    word-wrap: normal;
+    height: 150px;
+    width: 70%;
+    border-radius: 5%;
+    overflow:auto;
+}
 
