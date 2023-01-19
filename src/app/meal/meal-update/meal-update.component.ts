@@ -25,7 +25,7 @@ export class MealUpdateComponent implements OnInit {
   update(): void {
     this.mealsvc.change(this.meal).subscribe({
       next: (res) => {
-        this.router.navigateByUrl("/meal/list");
+        this.router.navigateByUrl(`/meal/details/${this.meal.id}`);
       },
       error: (err) => {
         console.error(err);
