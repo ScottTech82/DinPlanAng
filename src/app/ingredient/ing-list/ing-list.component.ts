@@ -30,6 +30,9 @@ export class IngListComponent implements OnInit {
     this.ingsvc.list().subscribe({
       next: (res) => {
         this.ings = res;
+        for(let x of this.ings) {
+          x.mealName = x.meal.name;
+        }
       },
       error: (err) => {
         console.error(err);
