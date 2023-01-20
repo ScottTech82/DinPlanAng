@@ -9,4 +9,5 @@ export class Ingredient {
     mealId!: number;
     meal!: Meal;
     
+    mealName: string = "";
 }
