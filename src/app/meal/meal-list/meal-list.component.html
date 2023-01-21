@@ -7,7 +7,7 @@
     <table class="table table-sm table-hover table-responsive col-auto" id="usertable">
         <thead>
             <tr>
-                <th>Id</th>
+                <!-- <th>Id</th> -->
                 <th>Name</th>
                 <th>Type</th>
                 <th>Cook Time</th>
@@ -17,7 +17,7 @@
         </thead>
         <tbody>
             <tr *ngFor="let m of meals">
-                <td (click)="details(m.id)"><button id="uBtn" class="btn btn-link" (click)="details(m.id)">{{m.id}}</button></td>
+                <!-- <td (click)="details(m.id)"><button id="uBtn" class="btn btn-link" (click)="details(m.id)">{{m.id}}</button></td> -->
                 <td (click)="details(m.id)"><button id="uBtn" class="btn btn-link" (click)="details(m.id)">{{m.name}}</button></td>
                 <td (click)="details(m.id)"><button id="uBtn" class="btn btn-link" (click)="details(m.id)">{{m.type}}</button></td>
                 <td (click)="details(m.id)"><button id="uBtn" class="btn btn-link" (click)="details(m.id)">{{m.cookTime}}</button></td>

@@ -35,7 +35,8 @@
     color: black;
 }
 .table-hover tbody tr:hover{
-    background-color: rgba(8, 138, 158, 0.164);
+    background-color: rgba(209, 247, 253);
+    /* rgb(209, 247, 253); previous color */ 
 }
 #mealTable{
     margin-left: 20%;
