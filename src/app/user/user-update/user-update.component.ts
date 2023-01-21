@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Route, Router } from '@angular/router';
+import { Meal } from 'src/app/meal/meal.class';
+import { MealService } from 'src/app/meal/meal.service';
 import { User } from '../user.class';
 import { UserService } from '../user.service';
 
@@ -14,12 +16,13 @@ export class UserUpdateComponent implements OnInit {
   subTitle: string = " - Member Update -";
   user!: User;
   showVerifBtn: boolean = false;
- 
+  meals: Meal[] = [];
 
   constructor(
     private route: ActivatedRoute,
     private usersvc: UserService,
     private router: Router,
+    private mealsvc: MealService
   ) { }
 
   update(): void {
@@ -63,6 +66,14 @@ export class UserUpdateComponent implements OnInit {
         else {
           console.error(err);
         }
+      }
+    });
+    this.mealsvc.list().subscribe({
+      next: (res) => {
+        this.meals = res;
+      },
+      error: (err) => {
+        console.error(err);
       }
     });
   }

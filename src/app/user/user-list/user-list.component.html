@@ -17,9 +17,9 @@
         </thead>
         <tbody>
             <tr *ngFor="let u of users">
-                <td><button id="uBtn" class="btn btn-link" (click)="details(u.id)">{{u.id}}</button></td>
-                <td><button id="uBtn" class="btn btn-link" (click)="details(u.id)">{{u.username}}</button></td>
-                <td><button id="uBtn" class="btn btn-link" (click)="details(u.id)">{{u.favorite}}</button></td>
+                <td (click)="details(u.id)"><button id="uBtn" class="btn btn-link" (click)="details(u.id)">{{u.id}}</button></td>
+                <td (click)="details(u.id)"><button id="uBtn" class="btn btn-link" (click)="details(u.id)">{{u.username}}</button></td>
+                <td (click)="details(u.id)"><button id="uBtn" class="btn btn-link" (click)="details(u.id)">{{u.favorite}}</button></td>
             </tr>
         </tbody>
     </table>

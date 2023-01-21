@@ -20,9 +20,15 @@
 #removeBtn{
     color: black;
     padding: 0px 30px;
+    border-color: rgb(134, 4, 4);
 }
 #updateBtn{
     color: black;
     padding: 0px 20px;
+    border-color: rgba(11, 113, 129, 0.479);
+    border-style: outset;
 }
-
+#updateBtn:hover{
+    color: black;
+    background-color: rgba(11, 113, 129, 0.479);
+}
