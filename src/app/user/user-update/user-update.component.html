@@ -13,7 +13,13 @@
                 </tr>
                 <tr>
                     <th>Favorite</th>
-                    <td><input [(ngModel)]="user.favorite" ngDefaultControl></td>
+                    <td>
+                        <!-- <input [(ngModel)]="user.favorite" ngDefaultControl> -->
+                        <select id="mealsList" [(ngModel)]="user.favorite" ngDefaultControl>
+                            <option *ngFor="let m of meals" [ngValue]="m.name">{{m.name}}</option>
+                        </select>
+                        <span id="Note">*choose from already entered meals</span>
+                    </td>
                 </tr>
             </tbody>
         </table>
