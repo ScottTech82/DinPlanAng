@@ -16,11 +16,11 @@
         </thead>
         <tbody>
             <tr *ngFor="let i of ings">
-                <td><button id="uBtn" class="btn btn-link" (click)="details(i.id)">{{i.id}}</button></td>
-                <td><button id="uBtn" class="btn btn-link" (click)="details(i.id)">{{i.name}}</button></td>
-                <td><button id="uBtn" class="btn btn-link" (click)="details(i.id)">{{i.amount}}</button></td>
-                <td><button id="uBtn" class="btn btn-link" (click)="details(i.id)">{{i.notes}}</button></td>
-                <td><button id="uBtn" class="btn btn-link" (click)="details(i.id)">{{i.mealId}}</button></td>
+                <td (click)="details(i.id)"><button id="uBtn" class="btn btn-link" (click)="details(i.id)">{{i.id}}</button></td>
+                <td (click)="details(i.id)"><button id="uBtn" class="btn btn-link" (click)="details(i.id)">{{i.name}}</button></td>
+                <td (click)="details(i.id)"><button id="uBtn" class="btn btn-link" (click)="details(i.id)">{{i.amount}}</button></td>
+                <td (click)="details(i.id)"><button id="uBtn" class="btn btn-link" (click)="details(i.id)">{{i.notes}}</button></td>
+                <td (click)="details(i.id)"><button id="uBtn" class="btn btn-link" (click)="details(i.id)">{{i.mealId}}</button></td>
             </tr>
         </tbody>
     </table>
