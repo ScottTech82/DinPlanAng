@@ -10,13 +10,21 @@
                 </tr>
                 <tr>
                     <th>Username</th>
-                    <td><input [(ngModel)]="user.username" ngDefaultControl></td>
+                    <td *ngIf="showVerifBtn === false"><input [(ngModel)]="user.username" ngDefaultControl></td>
+                    <td *ngIf="showVerifBtn === true"><input [(ngModel)]="user.username" ngDefaultControl disabled></td>
                 </tr>
                 <tr>
                     <th>Favorite</th>
-                    <td>
+                    <td *ngIf="showVerifBtn === false">
                         <!-- <input [(ngModel)]="user.favorite" ngDefaultControl> -->
                         <select id="mealsList" [(ngModel)]="user.favorite" ngDefaultControl>
+                            <option *ngFor="let m of meals" [ngValue]="m.name">{{m.name}}</option>
+                        </select>
+                        <span id="Note">*choose from already entered meals</span>
+                    </td>
+                    <td *ngIf="showVerifBtn === true">
+                        <!-- <input [(ngModel)]="user.favorite" ngDefaultControl> -->
+                        <select id="mealsList" [(ngModel)]="user.favorite" ngDefaultControl disabled>
                             <option *ngFor="let m of meals" [ngValue]="m.name">{{m.name}}</option>
                         </select>
                         <span id="Note">*choose from already entered meals</span>
@@ -25,16 +33,22 @@
             </tbody>
         </table>
         <table class="table table-sm" id="updateBtnTable">
-            <tr>
+            <tr *ngIf="showVerifBtn === false">
                 <th></th>
                 <td id="tdButtonUp">
                     <button id="updateBtn" (click)="update()" class="btn btn-info">Update Member</button>
                 </td>
                 <td id="tdButtonRem">
                     <button id="removeBtn" (click)="remove()" class="btn btn-danger">Remove</button>
-                    <!-- <span *ngIf="showVerifBtn" id="tdButtonRem">
-                        <button id="removeBtn" (click)="verifyRemove()" class="btn btn-outline-danger">Please Confirm this Delete</button>
-                    </span> -->
+                </td>
+            </tr>
+            <tr *ngIf="showVerifBtn === true">
+                <th></th>
+                <td id="tdButtonUp">
+                    <button id="updateBtn" (click)="update()" class="btn btn-outline-info" disabled>Update Member</button>
+                </td>
+                <td id="tdButtonRem">
+                    <button id="removeBtn" (click)="remove()" class="btn btn-outline-danger" disabled>Remove</button>
                 </td>
             </tr>
             <tr *ngIf="showVerifBtn">&nbsp;</tr>
