@@ -32,11 +32,18 @@
                 </td>
                 <td id="tdButtonRem">
                     <button id="removeBtn" (click)="remove()" class="btn btn-danger">Remove</button>
-                    <span *ngIf="showVerifBtn" id="tdButtonRem">
-                        <button id="removeBtn" (click)="verifyRemove()" class="btn btn-danger">Please Confirm this Delete</button>
-                    </span>
+                    <!-- <span *ngIf="showVerifBtn" id="tdButtonRem">
+                        <button id="removeBtn" (click)="verifyRemove()" class="btn btn-outline-danger">Please Confirm this Delete</button>
+                    </span> -->
                 </td>
             </tr>
+            <tr *ngIf="showVerifBtn" id="tdButtonRem">
+                    <th>Please confirm you would like to delete this member profile.</th>
+                    <td>
+                        <button id="removeBtn" (click)="verifyRemove()" class="btn btn-outline-danger">Confirm Delete</button>
+                        <button id="cancelRem" (click)="remove()" class="btn btn-outline-secondary">Cancel</button>
+                    </td>
+                </tr>
         </table>
     </main>
 </div>
