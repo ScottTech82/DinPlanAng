@@ -1,6 +1,7 @@
 <div>
     <app-header [pageTitle]="pageTitle" [subTitle]="subTitle"></app-header>
     <main>
+        <button class="btn btn-outline-secondary" id="cancelB" (click)="cancel()">Cancel</button>
         <table class="table table-sm" id="updateTable" *ngIf="user">
             <tbody>
                 <tr>

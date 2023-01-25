@@ -39,6 +39,9 @@ export class UserUpdateComponent implements OnInit {
   remove(): void {
     this.showVerifBtn = !this.showVerifBtn;
   }
+  cancel(): void {
+    this.router.navigateByUrl("user/list");
+  }
 
   verifyRemove(): void {
     this.usersvc.remove(this.user.id).subscribe({
