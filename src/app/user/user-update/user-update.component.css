@@ -10,7 +10,6 @@
 #tdButtonRem{
     width: 50%;
     padding-top: 20px;
-    padding-left: 10%;
     
 }
 #updateBtnTable{
@@ -18,20 +17,25 @@
     margin-left: 0%;
 }
 #removeBtn{
-    color: black;
     padding: 0px 30px;
-    border-color: rgb(134, 4, 4);
+    color: rgba(212, 10, 10, 0.753); /* rgb(34, 100, 102) */
+    border-color: whitesmoke;
+    border-style: outset;
 }
-#updateBtn{
+#removeBtn:hover{
+    color: black;
+    background-color: rgba(212, 10, 10, 0.753);
+}
+/*#updateBtn{
     color: black;
     padding: 0px 20px;
     border-color: rgba(11, 113, 129, 0.479);
     border-style: outset;
-}
-#updateBtn:hover{
+}*/
+/*#updateBtn:hover{
     color: black;
     background-color: rgba(11, 113, 129, 0.479);
-}
+}*/
 #Note{
     padding-left: 2%;
     color: rgb(25, 95, 97);
@@ -40,4 +44,26 @@
 #mealsList{
     padding: 3px 58px;
 }
-
+#updateBtn{
+    padding: 0px 20px;
+    color:rgb(34, 100, 102);
+    border-color: whitesmoke;
+    border-style: outset;
+}
+#updateBtn:hover{
+    color: black;
+    background-color: rgba(11, 113, 129, 0.479);
+}
+#cancelB{
+    padding: 0px 10px;
+    color:rgb(154, 186, 187);
+    border-color: whitesmoke;
+    border-style: outset;
+    margin-left: 20%;
+    font-size: small;
+    margin-bottom: 2%;
+}
+#cancelB:hover {
+    color: black;
+    background-color: rgba(11, 113, 129, 0.479);
+}
