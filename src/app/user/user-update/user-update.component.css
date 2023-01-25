@@ -81,6 +81,7 @@
 #delNote{
     color: rgb(25, 95, 97);
     font-style: italic;
+    font-weight: bold;
     padding-left: 5%;
 }
 #verifRemoveBtn{

@@ -3,10 +3,10 @@ li {
     padding-top: 3%;
 }
 a{
-    text-decoration: none;
+    text-decoration:none;
     padding-left: 15%;
     color: rgb(51, 90, 92);
-    font-size: large;
+    font-size: larger;
     font-style: italic;
     
 }
