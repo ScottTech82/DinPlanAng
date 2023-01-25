@@ -1,7 +1,8 @@
 <div *ngIf="darkmode === false" id="users" class="row justify-content-center">
     <app-header [pageTitle]="pageTitle" [subTitle]="subTitle"></app-header>
     <table>
-        <a routerLink="/meal/create" id="create">Add Meal</a>
+        <!-- <a routerLink="/meal/create" id="create">Add Meal</a> -->
+        <button class="btn btn-outline-info" id="createBtn" (click)="createBtn()">Add Meal</button>
         <span id="note">*You can click on a meal to see the ingredient list.</span>
     </table>
     <table class="table table-sm table-hover table-responsive col-auto" id="usertable">

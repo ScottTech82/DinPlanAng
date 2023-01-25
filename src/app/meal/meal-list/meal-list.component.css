@@ -31,3 +31,15 @@
     color: white;
     
 }
+#createBtn{
+    padding: 0px 20px;
+    color:rgb(34, 100, 102);
+    border-color: white;
+    border-style: outset;
+    font-size: small;
+    margin-left: 22%;
+}
+#createBtn:hover{
+    color: black;
+    background-color: rgba(11, 113, 129, 0.479);
+}

@@ -23,6 +23,9 @@ export class MealListComponent implements OnInit {
   details(id:number): void {
     this.router.navigateByUrl(`/meal/details/${id}`);
   }
+  createBtn(): void {
+    this.router.navigateByUrl("/meal/create");
+  }
 
   ngOnInit(): void {
     this.mealsvc.list().subscribe({
