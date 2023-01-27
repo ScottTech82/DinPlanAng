@@ -36,6 +36,41 @@
     </table>
     </div>
     <table class="table table-sm" id="updateBtnTable">
+        <tr *ngIf="showVerifBtn === false">
+            <th></th>
+            <td id="tdButtonUp">
+                <button id="updateBtn" (click)="update()" class="btn btn-info">Update Meal</button>
+            </td>
+            <td id="tdButtonRem">
+                <button id="removeBtn" (click)="remove()" class="btn btn-danger">Remove</button>
+            </td>
+        </tr>
+        <tr *ngIf="showVerifBtn === true">
+            <th></th>
+            <td id="tdButtonUp">
+                <button id="updateBtn" (click)="update()" class="btn btn-outline-info" disabled>Update Meal</button>
+            </td>
+            <td id="tdButtonRem">
+                <button id="removeBtn" (click)="remove()" class="btn btn-outline-danger" disabled>Remove</button>
+            </td>
+        </tr>
+        <tr *ngIf="showVerifBtn">&nbsp;</tr>
+        <tr *ngIf="showVerifBtn">
+            <th></th>
+            <td id="delNote">*Please confirm you would like to delete this member profile.  This action cannot be reversed!*</td>
+            </tr>
+            <tr *ngIf="showVerifBtn">&nbsp;</tr>
+            <tr *ngIf="showVerifBtn">
+                <th></th>
+                <td>
+                    <button id="cancelRem" (click)="remove()" class="btn btn-outline-secondary">Cancel</button>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <button id="verifRemoveBtn" (click)="verifyRemove()" class="btn btn-outline-danger">Confirm Delete</button>
+                </td>
+            </tr>
+    </table>
+    <!--
+    <table class="table table-sm" id="updateBtnTable">
         <tr>
             <th></th>
             <td id="tdButtonUp" (click)="clickAnyWhere()">
@@ -49,6 +84,7 @@
             </td>
         </tr>
     </table>
+    -->
 </div>
 
 
