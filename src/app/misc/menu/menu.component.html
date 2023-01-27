@@ -1,8 +1,14 @@
 <nav>
     <ul>
-        <button class="btn btn-link" id="MenuName" (click)="collapseMenu()" (mouseover)="collapseMenu()">- Menu - </button>
-            <ng-container *ngIf="seemenu === true">
-                <app-menuitem *ngFor="let m of menus" [menu]="m"></app-menuitem>
-            </ng-container>
+        <!-- 
+        <button type="button" class="btn btn-outline-primary" data-toggle="button" 
+        aria-pressed="false" autocomplete="off" id="MenuName" (click)="collapseMenu()" 
+        (mouseover)="collapseMenu()">- Menu -</button>
+        <ng-container *ngIf="seemenu === true">
+            <app-menuitem *ngFor="let m of menus" [menu]="m"></app-menuitem>
+        </ng-container>
+        -->
+        <button class="btn btn-link" id="MenuName">Menu</button>
+        <app-menuitem *ngFor="let m of menus" [menu]="m"></app-menuitem>
     </ul>
 </nav>
