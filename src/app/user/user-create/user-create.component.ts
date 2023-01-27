@@ -11,7 +11,7 @@ import { UserService } from '../user.service';
 export class UserCreateComponent implements OnInit {
 
   pageTitle: string = "Dinner Planner!";
-  subTitle: string = "New Member";
+  subTitle: string = "- New Member -";
   user: User = new User;
 
   constructor(
@@ -28,6 +28,9 @@ export class UserCreateComponent implements OnInit {
         console.error(err);
       }
     });
+  }
+  cancel(): void {
+    this.router.navigateByUrl("/user/list");
   }
 
   ngOnInit(): void {
