@@ -22,7 +22,7 @@
     color: black;
 }
 #note{
-    padding-left: 30%;
+    padding-left: 20%;
     color: rgb(25, 95, 97);
     font-style: italic;
 }
@@ -42,4 +42,7 @@
 #createBtn:hover{
     color: black;
     background-color: rgba(11, 113, 129, 0.479);
+}
+tbody{
+    cursor:pointer;
 }

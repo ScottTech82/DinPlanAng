@@ -12,7 +12,7 @@ export class MealUpdateComponent implements OnInit {
 
   meal!: Meal;
   pageTitle: string = "Dinner Planner!";
-  subTitle: string = "Update Meal";
+  subTitle: string = "- Update Meal -";
   showVerifBtn: boolean = false;
 
   constructor(
@@ -32,6 +32,9 @@ export class MealUpdateComponent implements OnInit {
       }
     })
 
+  }
+  cancel(): void {
+    this.router.navigateByUrl(`/meal/details/${this.meal.id}`);
   }
 
   remove(): void {

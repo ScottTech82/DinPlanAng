@@ -2,6 +2,7 @@
     <div (click)="clickAnyWhere()">
     <app-header [pageTitle]="pageTitle" [subTitle]="subTitle"></app-header>
     </div>
+    <button class="btn btn-outline-secondary" id="cancelB" (click)="cancel()">Cancel Update</button>
     <div (click)="clickAnyWhere()">
     <table class="table table-sm" id="updateTable" *ngIf="meal">
         <tr>
