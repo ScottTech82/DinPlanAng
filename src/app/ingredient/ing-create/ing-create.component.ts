@@ -13,7 +13,7 @@ import { IngredientService } from '../ingredient.service';
 export class IngCreateComponent implements OnInit {
 
   pageTitle: string = "Dinner Planner!";
-  subTitle: string = "New Ingredient";
+  subTitle: string = "- New Ingredient -";
   ing: Ingredient = new Ingredient;
   meal!: Meal;
 
@@ -34,6 +34,9 @@ export class IngCreateComponent implements OnInit {
         console.error(err);
       }
     });
+  }
+  cancel(): void {
+    this.router.navigateByUrl(`/meal/details/${this.meal.id}`);
   }
 
   ngOnInit(): void {

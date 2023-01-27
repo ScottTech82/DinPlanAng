@@ -1,5 +1,7 @@
-<div class="row justify-content-center">
+<div>
     <app-header [pageTitle]="pageTitle" [subTitle]="subTitle"></app-header>
+    <main>
+    <button id="cancelB" class="btn btn-outline-secondary" (click)="cancel()">Cancel</button>
     <table class="table table-sm table-responsive col-auto" id="createnew">
         <tr>
             <th>Id</th>
@@ -30,6 +32,7 @@
             </td>
         </tr>
     </table> 
+    </main>
 </div>
 
 
