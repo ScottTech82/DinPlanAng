@@ -1,13 +1,33 @@
 #createnew{
     width: 60% !important;
+    margin-left: 20%;
 }
 #tdButton{
+    width: 65%;
     padding-top: 20px;
-    padding-left: 35%;
 }
 #createBtn{
-    padding: 0px 25px;
+    padding: 0px 20px;
+    color:rgb(34, 100, 102);
+    border-color: whitesmoke;
+    border-style: outset;
+}
+#createBtn:hover{
     color: black;
+    background-color: rgba(11, 113, 129, 0.479);
+}
+#cancelB{
+    padding: 0px 10px;
+    color:rgb(154, 186, 187);
+    border-color: whitesmoke;
+    border-style: outset;
+    margin-left: 20%;
+    font-size: small;
+    margin-bottom: 2%;
+}
+#cancelB:hover {
+    color: black;
+    background-color: rgba(11, 113, 129, 0.479);
 }
 #note1{
     color: rgb(25, 95, 97);
