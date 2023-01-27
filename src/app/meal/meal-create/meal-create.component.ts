@@ -34,6 +34,9 @@ export class MealCreateComponent implements OnInit {
     });
     
   }
+  cancel(): void {
+    this.router.navigateByUrl("/meal/list");
+  }
 
   ngOnInit(): void {
     this.usersvc.list().subscribe({
