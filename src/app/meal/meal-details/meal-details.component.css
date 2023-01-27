@@ -6,9 +6,9 @@
     color: rgb(73, 124, 126);
 }
 #updateBtn{
-    padding: 0px 30px;
-    color: rgb(90, 90, 90);
-    border-color: white;
+    padding: 0px 20px;
+    color:rgb(34, 100, 102);
+    border-color: whitesmoke;
     border-style: outset;
 }
 #updateBtn:hover{
@@ -21,9 +21,9 @@
     
 }
 #printBtn{
-    padding: 0px 20px;
-    color: rgb(90, 90, 90);
-    border-color: white;
+    padding: 0px 15px;
+    color:rgb(34, 100, 102);
+    border-color: whitesmoke;
     border-style: outset;
 }
 #printBtn:hover{
@@ -80,6 +80,9 @@ textarea{
 }
 thead{
     color: rgba(15, 56, 94, 0.973);
+}
+tbody{
+    cursor: pointer;
 }
 
 @media print{

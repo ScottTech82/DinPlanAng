@@ -18,14 +18,19 @@
     margin-left: 0%;
 }
 #removeBtn{
-    color: black;
     padding: 0px 30px;
-    border-color: rgb(134, 4, 4);
+    color: rgba(212, 10, 10, 0.753); /* rgb(34, 100, 102) */
+    border-color: whitesmoke;
+    border-style: outset;
+}
+#removeBtn:hover{
+    color: black;
+    background-color: rgba(212, 10, 10, 0.753);
 }
 #updateBtn{
-    color: black;
     padding: 0px 20px;
-    border-color: rgba(11, 113, 129, 0.479);
+    color:rgb(34, 100, 102);
+    border-color: whitesmoke;
     border-style: outset;
 }
 #updateBtn:hover{
@@ -39,4 +44,43 @@
     border-radius: 5%;
     overflow:auto;
 }
-
+#cancelB{
+    padding: 0px 10px;
+    color:rgb(154, 186, 187);
+    border-color: whitesmoke;
+    border-style: outset;
+    margin-left: 20%;
+    font-size: small;
+    margin-bottom: 2%;
+}
+#cancelB:hover {
+    color: black;
+    background-color: rgba(11, 113, 129, 0.479);
+}
+#cancelRem{
+    padding: 0px 10px;
+    color:rgb(34, 100, 102);
+    border-color: whitesmoke;
+    border-style: outset;
+    margin-left: 15%;
+}
+#cancelRem:hover {
+    color: black;
+    background-color: rgba(11, 113, 129, 0.479);
+}
+#delNote{
+    color: rgb(25, 95, 97);
+    font-style: italic;
+    font-weight: bold;
+    padding-left: 5%;
+}
+#verifRemoveBtn{
+    padding: 0px 30px;
+    color: rgba(212, 10, 10, 0.753); /* rgb(34, 100, 102) */
+    border-color: whitesmoke;
+    border-style: outset;
+}
+#verifRemoveBtn:hover{
+    color: black;
+    background-color: rgba(212, 10, 10, 0.753);
+}
