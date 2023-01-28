@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { ChangeDetectionStrategy, Injectable } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { SystemService } from '../common/system.service';
 import { User } from '../user/user.class';
@@ -25,9 +25,11 @@ export class MemberService {
   create(user: User): Observable<User> {
     return this.http.post(`${this.baseurl}`, user) as Observable<User>;
   }
-
-  change():
-
-  remove(): 
+  change(user: User): Observable<any> {
+    return this.http.put(`${this.baseurl}/${user.id}`, user) as Observable<any>;
+  }
+  remove(id: number): Observable<any> {
+    return this.http.delete(`${this.baseurl}/${id}`) as Observable<any>;
+  } 
 
 }
