@@ -1,0 +1,25 @@
+<div id="users" class="row justify-content-center">
+    <app-header [pageTitle]="pageTitle" [subTitle]="subTitle"></app-header>
+    <table>
+        <!-- <a routerLink="/user/create" id="create">Add Member</a> -->
+        <button class="btn btn-outline-info" id="createBtn" (click)="create()">Add New Member</button>
+        <span id="note">*You may click on a family member to update or delete.</span>
+    </table>
+    <table class="table table-sm table-hover table-responsive col-auto" id="usertable">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Favorite Food?</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let u of users">
+                <td (click)="details(u.id)"><button id="uBtn" class="btn btn-link" (click)="details(u.id)">{{u.id}}</button></td>
+                <td (click)="details(u.id)"><button id="uBtn" class="btn btn-link" (click)="details(u.id)">{{u.username}}</button></td>
+                <td (click)="details(u.id)"><button id="uBtn" class="btn btn-link" (click)="details(u.id)">{{u.favorite}}</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
