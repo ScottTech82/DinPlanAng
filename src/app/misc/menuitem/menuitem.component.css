@@ -2,14 +2,25 @@ li {
     display: block;
     padding-top: 3%;
 }
+td {
+    display: block;
+    padding-top: 3%;
+    padding-left: 10%;
+}
 a{
-    text-decoration:none;
-    padding-left: 15%;
-    color: rgb(51, 90, 92);
+    text-decoration: none;
+    padding: 0px 8px;
+    color: white;  /* rgb(51, 90, 92) */
+    background-color: rgb(4, 99, 136); /* rgb(9, 139, 139) */
     font-size: larger;
     font-style: italic;
+    border-style: outset;
+    border-color: rgb(15, 135, 151);
+    border-radius: 20%;
     
 }
 a:hover{
-    color:rgb(114, 183, 214);
+    color:rgb(114, 183, 214); /*rgb(114, 183, 214); */
+    background-color: black;
+    border-color: black;
 }
