@@ -9,6 +9,12 @@
 #MenuName:hover{
     color: green;
 }
+#menuTable {
+    border-style:dashed;
+    border-color: rgb(129, 128, 128) !important;
+    width: 70%;
+    
+}
 
 
 

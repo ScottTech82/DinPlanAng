@@ -1,5 +1,25 @@
 <nav>
+    <table id="menuTable">
+        <tr>
+            <td></td>
+        </tr>
+        <tr>
+            <app-menuitem *ngFor="let m of menus" [menu]="m"></app-menuitem>
+        </tr>
+    </table>
+</nav>
+
+
+
+<!-- 
+<nav>
     <ul>
+        <button class="btn btn-link" id="MenuName">Menu</button>
+        <app-menuitem *ngFor="let m of menus" [menu]="m"></app-menuitem>
+    </ul>
+</nav>
+-->
+
         <!-- 
         <button type="button" class="btn btn-outline-primary" data-toggle="button" 
         aria-pressed="false" autocomplete="off" id="MenuName" (click)="collapseMenu()" 
@@ -8,7 +28,3 @@
             <app-menuitem *ngFor="let m of menus" [menu]="m"></app-menuitem>
         </ng-container>
         -->
-        <button class="btn btn-link" id="MenuName">Menu</button>
-        <app-menuitem *ngFor="let m of menus" [menu]="m"></app-menuitem>
-    </ul>
-</nav>
