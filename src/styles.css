@@ -25,3 +25,8 @@ header{
 tbody{
     cursor: pointer;
 }
+.tableNote{
+    padding-left: 35%;
+    color: rgb(2, 66, 68);
+    font-style: italic;
+}

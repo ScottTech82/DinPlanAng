@@ -1,18 +1,16 @@
 <div>
-<div class="sideMenu">
-    <app-menu></app-menu>
-</div>
+    <div class="sideMenu">
+        <app-menu></app-menu>
+    </div>
 <div class="mainDiv">
     <app-header [pageTitle]="pageTitle" [subTitle]="subTitle" id="header"></app-header>
     <table id="buttonTable">
-        <!-- <a routerLink="/meal/create" id="create">Add Meal</a> -->
         <button class="btn btn-outline-info" id="createBtn" (click)="createBtn()">Add New Meal</button>
-        <span id="note">*Please click on a meal to see the ingredient list and further details.</span>
+        <span class="tableNote">*Please click on a meal to see the ingredient list and further details.</span>
     </table>
     <table class="table table-sm table-hover table-responsive col-auto" id="usertable">
         <thead>
             <tr>
-                <!-- <th>Id</th> -->
                 <th>Name</th>
                 <th>Type</th>
                 <th>Cook Time</th>
@@ -22,7 +20,6 @@
         </thead>
         <tbody>
             <tr *ngFor="let m of meals">
-                <!-- <td (click)="details(m.id)"><button id="uBtn" class="btn btn-link" (click)="details(m.id)">{{m.id}}</button></td> -->
                 <td (click)="details(m.id)"><button id="uBtn" class="btn btn-link" (click)="details(m.id)">{{m.name}}</button></td>
                 <td (click)="details(m.id)"><button id="uBtn" class="btn btn-link" (click)="details(m.id)">{{m.type}}</button></td>
                 <td (click)="details(m.id)"><button id="uBtn" class="btn btn-link" (click)="details(m.id)">{{m.cookTime}}</button></td>
@@ -32,7 +29,6 @@
         </tbody>
     </table>
 </div>
-
 </div>
 
 
