@@ -1,7 +1,30 @@
-#usertable{
-    width: 70% !important;
-    margin-left: 10%;
-    margin-top: 1%;
+table {
+    width: 70%;
+    margin-left: 0%;
+    margin-top: 2%;
+}
+#headerDiv{
+    display: inline-block;
+    height: 10%;
+    width: 70%;
+}
+#leftDiv{
+    display: inline-block;
+    width: 15%;
+    height: 100%;
+    margin-top: 5%;
+}
+#rightDiv{
+    display: inline-block;
+    width: 70%;
+    
+}
+#header{
+    width: 70%;
+}
+app-menu{
+    width: 13%;
+    padding-top: 10%;
 }
 .table-hover tbody tr:hover{
     background-color: rgb(209, 247, 253);
@@ -11,7 +34,7 @@
     color:rgb(34, 100, 102);
     /* padding-left: 22%; */
     /* color: black; */
-    margin-left: 22%;
+    margin-left: 0%;
     /* padding: 0px 15px; */
 }
 #create:hover{
@@ -22,7 +45,7 @@
     color: black;
 }
 #note{
-    padding-left: 20%;
+    padding-left: 35%;
     color: rgb(25, 95, 97);
     font-style: italic;
 }
@@ -37,7 +60,6 @@
     border-color: white;
     border-style: outset;
     font-size: small;
-    margin-left: 22%;
 }
 #createBtn:hover{
     color: black;
