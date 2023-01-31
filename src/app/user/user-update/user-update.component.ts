@@ -12,8 +12,8 @@ import { UserService } from '../user.service';
 })
 export class UserUpdateComponent implements OnInit {
 
-  pageTitle: string = "Dinner Planner!";
-  subTitle: string = " - Member Update -";
+  pageTitle: string = "Dinner Plan";
+  subTitle: string = "- Member Update -";
   user!: User;
   showVerifBtn: boolean = false;
   meals: Meal[] = [];
@@ -53,6 +53,12 @@ export class UserUpdateComponent implements OnInit {
         console.error(err);
       }
     });
+  }
+
+  clickAnyWhere(): void {
+    if(this.showVerifBtn === true) {
+      this.showVerifBtn = false;
+    }
   }
 
 

@@ -12,8 +12,8 @@ import { UserService } from '../user.service';
 export class UserListComponent implements OnInit {
 
   users: User[] = [];
-  pageTitle: string = "Dinner Planner!";
-  subTitle: string = " - Member List -";
+  pageTitle: string = "Dinner Plan";
+  subTitle: string = "- Member List -";
 
 
   constructor(

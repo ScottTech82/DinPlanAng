@@ -10,7 +10,7 @@ import { UserService } from '../user.service';
 })
 export class UserCreateComponent implements OnInit {
 
-  pageTitle: string = "Dinner Planner!";
+  pageTitle: string = "Dinner Plan";
   subTitle: string = "- New Member -";
   user: User = new User;
 
