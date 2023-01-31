@@ -8,11 +8,15 @@ table {
     height: 10%;
     width: 70%;
 }
-#leftDiv{
+#menuDiv{
     display: inline-block;
     width: 15%;
     height: 100%;
     margin-top: 5%;
+}
+#leftDiv{
+    display: inline-block;
+    width: 15%;
 }
 #rightDiv{
     display: inline-block;
