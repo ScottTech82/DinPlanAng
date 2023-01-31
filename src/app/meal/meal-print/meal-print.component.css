@@ -3,14 +3,14 @@
     display: inline-table;
     width: 60%;
     margin-left: 10%;
-    color: rgb(73, 124, 126);
+    color: rgb(5, 96, 99);
 }
 #MealTitle{
     font-style: italic;
     display: inline-table;
     width: 60%;
     margin-left: 10%;
-    color: rgb(73, 124, 126);
+    color: rgb(5, 96, 99);
 }
 #printBtn{
     padding: 0px 30px;
@@ -42,6 +42,7 @@ textarea{
     border: solid 1px white !important;
     height: 200px;
 }
+
 
     
     
