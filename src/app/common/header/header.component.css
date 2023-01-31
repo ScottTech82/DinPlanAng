@@ -3,7 +3,7 @@
     font-size:xx-large;
     font-weight: bold;
     font-style: italic;
-    padding-left: 50%;
+    padding-left: 40%;
     color:rgb(73, 124, 126);
 }
 #subtitle{
@@ -17,12 +17,11 @@
 }
 #headMenu{
     display: inline-table;
-    width: 12%;
+    width: 80%;
 }
 #titleMenu{
-    display: inline-table;
-    width: 50%;
-    margin-top: 3%;
+    margin-top: 8%;
+    width: 80%;
     margin-left: 4%;
 
 }

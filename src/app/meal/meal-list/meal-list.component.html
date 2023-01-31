@@ -1,17 +1,9 @@
+<div>
 <div id="menuDiv">
     <app-menu></app-menu>
 </div>
-<div id="headerDiv">
-    <app-header [pageTitle]="pageTitle" [subTitle]="subTitle" id="header"></app-header>
-</div>
-<div id="leftDiv">
-    <table>
-        <tr>
-            <td>NAME</td>
-        </tr>
-    </table>
-</div>
 <div id="rightDiv">
+    <app-header [pageTitle]="pageTitle" [subTitle]="subTitle" id="header"></app-header>
     <table id="buttonTable">
         <!-- <a routerLink="/meal/create" id="create">Add Meal</a> -->
         <button class="btn btn-outline-info" id="createBtn" (click)="createBtn()">Add New Meal</button>
@@ -39,6 +31,7 @@
             </tr>
         </tbody>
     </table>
+</div>
 </div>
 
 

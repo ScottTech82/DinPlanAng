@@ -10,24 +10,20 @@
     color: green;
 }
 nav{
-    display: inline-table;
-    width: 13%;
+    width: 90%;
+    height: 100% !important;
+    margin-left: 10%;
 }
-#menuTable {
-    /*
-    border-style:inset;
-    border-color: rgb(133, 168, 189) !important;
-    width: 70%;
-    height: 100%;
-    */
-    margin-left: 5%;
-    background-color: rgb(213, 222, 231);
+ul {
+    background-color: rgba(212, 223, 235, 0.404); /* 213, 222, 231 */
     border-radius: 10%;
+    height: 100%;
+    padding-inline-start: 20px;
+    padding-top: 10%;
 }
 tr, td {
     border-color: rgb(133, 168, 189) !important;
-    width: 5%;
-    height: 100%;
+    width: 13%;
     margin-left: 5%;
 }
 
