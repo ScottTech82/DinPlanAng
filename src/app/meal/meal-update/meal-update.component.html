@@ -12,27 +12,33 @@
         </tr>
         <tr>
             <th>Meal Name</th>
-            <td><Input [(ngModel)]="meal.name" ngDefaultControl></td>
+            <td *ngIf="showVerifBtn === false"><Input [(ngModel)]="meal.name" ngDefaultControl></td>
+            <td *ngIf="showVerifBtn === true"><Input [(ngModel)]="meal.name" ngDefaultControl disabled></td>
         </tr>
         <tr>
             <th>Type of Meal</th>
-            <td><Input [(ngModel)]="meal.type" ngDefaultControl></td>
+            <td *ngIf="showVerifBtn === false"><Input [(ngModel)]="meal.type" ngDefaultControl></td>
+            <td *ngIf="showVerifBtn === true"><Input [(ngModel)]="meal.type" ngDefaultControl disabled></td>
         </tr>
         <tr>
             <th>Cook Time</th>
-            <td><Input [(ngModel)]="meal.cookTime" ngDefaultControl></td>
+            <td *ngIf="showVerifBtn === false"><Input [(ngModel)]="meal.cookTime" ngDefaultControl></td>
+            <td *ngIf="showVerifBtn === true"><Input [(ngModel)]="meal.cookTime" ngDefaultControl disabled></td>
         </tr>
         <tr>
             <th>Cook Temp</th>
-            <td><Input [(ngModel)]="meal.cookTemp" ngDefaultControl></td>
+            <td *ngIf="showVerifBtn === false"><Input [(ngModel)]="meal.cookTemp" ngDefaultControl></td>
+            <td *ngIf="showVerifBtn === true"><Input [(ngModel)]="meal.cookTemp" ngDefaultControl disabled></td>
         </tr>
         <tr>
             <th>Cook Type</th>
-            <td><Input [(ngModel)]="meal.cookType" ngDefaultControl></td>
+            <td *ngIf="showVerifBtn === false"><Input [(ngModel)]="meal.cookType" ngDefaultControl></td>
+            <td *ngIf="showVerifBtn === true"><Input [(ngModel)]="meal.cookType" ngDefaultControl disabled></td>
         </tr>
         <tr>
             <th>Cooking Notes</th>
-            <td><textarea [(ngModel)]="meal.cookNotes" ngDefaultControl id="cookNotes" wrap="soft"></textarea></td>
+            <td *ngIf="showVerifBtn === false"><textarea [(ngModel)]="meal.cookNotes" ngDefaultControl id="cookNotes" wrap="soft"></textarea></td>
+            <td *ngIf="showVerifBtn === true"><textarea [(ngModel)]="meal.cookNotes" ngDefaultControl id="cookNotes" wrap="soft" disabled></textarea></td>
         </tr>
     </table>
     <table class="table table-sm" id="updateBtnTable">

@@ -1,38 +1,21 @@
-#usertable{
-    width: 70% !important;
-    margin-left: 10%;
-    margin-top: 1%;
+table {
+    width: 70%;
+    margin-top: 2%;
+    margin-left: 5%;
 }
 .table-hover tbody tr:hover{
-    background-color: rgb(209, 247, 253);
-}
-#create{
-    /* text-decoration: none; */
-    color:rgb(34, 100, 102);
-    /* padding-left: 22%; */
-    /* color: black; */
-    margin-left: 22%;
-    /* padding: 0px 15px; */
-}
-#create:hover{
-    color:green;
+    background-color: rgba(3, 145, 167, 0.171);
 }
 #uBtn{
     text-decoration: none;
     color: black;
 }
-#note{
-    padding-left: 25%;
-    color: rgb(25, 95, 97);
-    font-style: italic;
-}
 #createBtn{
     padding: 0px 20px;
-    color:rgb(34, 100, 102);
+    color:black;
     border-color: white;
     border-style: outset;
     font-size: small;
-    margin-left: 22%;
 }
 #createBtn:hover{
     color: black;

@@ -1,14 +1,14 @@
 #createnew{
     width: 60% !important;
-    margin-left: 20%;
+    margin-left: 5%;
 }
 #tdButton{
-    width: 58%;
+    padding-left: 5%;
     padding-top: 20px;
 }
 #createBtn{
     padding: 0px 20px;
-    color:rgb(34, 100, 102);
+    color:black;
     border-color: whitesmoke;
     border-style: outset;
 }
@@ -21,7 +21,7 @@
     color:rgb(154, 186, 187);
     border-color: whitesmoke;
     border-style: outset;
-    margin-left: 20%;
+    margin-left: 5%;
     font-size: small;
     margin-bottom: 2%;
 }
