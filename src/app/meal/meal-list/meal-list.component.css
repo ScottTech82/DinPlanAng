@@ -37,3 +37,6 @@ table {
 tbody{
     cursor:pointer;
 }
+.tableNote{
+    font-size: large;
+}

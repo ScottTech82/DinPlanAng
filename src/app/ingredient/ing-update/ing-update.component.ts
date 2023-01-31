@@ -12,8 +12,8 @@ import { IngredientService } from '../ingredient.service';
 })
 export class IngUpdateComponent implements OnInit {
 
-  pageTitle: string = "Dinner Planner!";
-  subTitle: string = "Update Ingredient";
+  pageTitle: string = "Dinner Plan";
+  subTitle: string = "- Update Ingredient -";
   showVerifBtn: boolean = false;
   ing!: Ingredient;
   meal!: Meal;
@@ -56,6 +56,10 @@ export class IngUpdateComponent implements OnInit {
     if(this.showVerifBtn === true) {
       this.showVerifBtn = false;
     }
+  }
+
+  cancel(): void {
+    this.router.navigateByUrl(`/ing/list`);
   }
 
   ngOnInit(): void {

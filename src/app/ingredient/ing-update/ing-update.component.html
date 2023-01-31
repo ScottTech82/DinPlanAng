@@ -1,9 +1,11 @@
 <div>
-    <div (click)="clickAnyWhere()">
-    <app-header [pageTitle]="pageTitle" [subTitle]="subTitle"></app-header>
+    <div class="sideMenu">
+        <app-menu></app-menu>
     </div>
-    <div (click)="clickAnyWhere()">
-    <table class="table table-sm" id="updateTable" *ngIf="ing">
+    <div class="mainDiv">
+    <app-header [pageTitle]="pageTitle" [subTitle]="subTitle" (click)="clickAnyWhere()"></app-header>
+    <table class="table table-sm" id="updateTable" *ngIf="ing" (click)="clickAnyWhere()">
+        <button class="btn btn-outline-secondary" id="cancelB" (click)="cancel()">Cancel Update</button>
         <tr>
             <th>Id</th>
             <td><Input [(ngModel)]="ing.id" type="number" disabled ngDefaultControl></td>
@@ -25,22 +27,38 @@
             <td><Input [(ngModel)]="meal.name" ngDefaultControl disabled></td>
         </tr>
     </table>
-    </div>
     <table class="table table-sm" id="updateBtnTable">
-        <tr>
-            <th></th>
-            <td id="tdButtonUp" (click)="clickAnyWhere()">
-                <button id="updateBtn" (click)="update()" class="btn btn-info">Update Meal</button>
+        <tr *ngIf="showVerifBtn === false">
+            <td id="tdButtonUp">
+                <button id="updateBtn" (click)="update()" class="btn btn-info">Update Ingredient</button>
             </td>
             <td id="tdButtonRem">
                 <button id="removeBtn" (click)="remove()" class="btn btn-danger">Remove</button>
-                <span *ngIf="showVerifBtn" id="tdButtonRem">
-                    <button id="removeBtn" (click)="verifyRemove()" class="btn btn-danger">Please Confirm this Delete</button>
-                </span>
             </td>
         </tr>
+        <tr *ngIf="showVerifBtn === true">
+            <td id="tdButtonUp">
+                <button id="updateBtn" (click)="update()" class="btn btn-outline-info" disabled>Update Ingredient</button>
+            </td>
+            <td id="tdButtonRem">
+                <button id="removeBtn" (click)="remove()" class="btn btn-outline-danger" disabled>Remove</button>
+            </td>
+        </tr>
+        <tr *ngIf="showVerifBtn === true">&nbsp;</tr>
+        <tr *ngIf="showVerifBtn === true">
+            <td id="delNote">*Please confirm you would like to delete this Ingredient.  This action cannot be reversed!*</td>
+            </tr>
+            <tr *ngIf="showVerifBtn">&nbsp;</tr>
+            <tr *ngIf="showVerifBtn">
+                <td>
+                    <button id="cancelRem" (click)="remove()" class="btn btn-outline-secondary">Cancel</button>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <button id="verifRemoveBtn" (click)="verifyRemove()" class="btn btn-outline-danger">Confirm Delete</button>
+                </td>
+            </tr>
     </table>
 </div>
+</div>  
 
 
 
