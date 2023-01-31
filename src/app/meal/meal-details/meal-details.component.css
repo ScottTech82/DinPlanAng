@@ -56,6 +56,9 @@ table {
     /*background-color: rgb(124, 123, 123);*/
     color: black;
 }
+#cookDescTable{
+    margin-top: 2%;
+}
 #cookNotes{
     border-color: grey;
     height: 200px;
