@@ -1,10 +1,11 @@
 #updateTable{
     width: 60% !important;
-    margin-left: 20%;
+    margin-left: 5%;
 }
 #tdButtonUp{
     width: 30%;
     padding-top: 20px;
+    padding-left: 5%;
     
 }
 #tdButtonRem{
@@ -12,10 +13,6 @@
     padding-top: 20px;
     padding-left: 10%;
     
-}
-#updateBtnTable{
-    display: inline-table;
-    margin-left: 0%;
 }
 #removeBtn{
     padding: 0px 30px;
@@ -49,7 +46,7 @@
     color:rgb(154, 186, 187);
     border-color: whitesmoke;
     border-style: outset;
-    margin-left: 20%;
+    margin-left: 5%;
     font-size: small;
     margin-bottom: 2%;
 }
