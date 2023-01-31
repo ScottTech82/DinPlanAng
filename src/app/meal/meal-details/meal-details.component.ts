@@ -11,7 +11,7 @@ import { MealService } from '../meal.service';
 })
 export class MealDetailsComponent implements OnInit {
 
-  pageTitle: string = "Dinner Planner!";
+  pageTitle: string = "Dinner Plan";
   subTitle: string = "Meal Details";
   meal!: Meal;
 
