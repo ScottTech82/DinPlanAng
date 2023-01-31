@@ -11,7 +11,7 @@ import { MealService } from '../meal.service';
 export class MealUpdateComponent implements OnInit {
 
   meal!: Meal;
-  pageTitle: string = "Dinner Planner!";
+  pageTitle: string = "Dinner Plan";
   subTitle: string = "- Update Meal -";
   showVerifBtn: boolean = false;
 
