@@ -1,29 +1,26 @@
 table {
-    width: 70%;
-    margin-left: 0%;
+    width: 90%;
     margin-top: 2%;
+    margin-left: 5%;
 }
-#headerDiv{
+#menuDiv{
     display: inline-block;
-    height: 10%;
-    width: 70%;
-}
-#leftDiv{
-    display: inline-block;
-    width: 15%;
-    height: 100%;
+    width: 13%;
+    height: 200px; 
     margin-top: 5%;
+
 }
 #rightDiv{
     display: inline-block;
-    width: 70%;
-    
+    width: 85%;
+    margin-left: 0%;
 }
 #header{
     width: 70%;
 }
 app-menu{
-    width: 13%;
+    height: 100% !important;
+    width: 100%;
     padding-top: 10%;
 }
 .table-hover tbody tr:hover{
