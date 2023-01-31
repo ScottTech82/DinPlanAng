@@ -17,7 +17,7 @@ app-menu{
     padding-top: 10%;
 }
 .table-hover tbody tr:hover{
-    background-color: rgb(209, 247, 253);
+    background-color: rgba(3, 145, 167, 0.171);
 }
 #create{
     /* text-decoration: none; */

@@ -13,6 +13,7 @@ html {
         width: 13%;
         height: 200px; 
         margin-top: 2%;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .mainDiv{
     display: inline-block;
