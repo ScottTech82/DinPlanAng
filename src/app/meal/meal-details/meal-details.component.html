@@ -61,18 +61,14 @@
             </ng-container>
         </tbody>
     </table>
-        <!--
+    <table *ngIf="meal" id="cookDescTable">
         <br>
-        <br>
-        <h4 id="IngTitle">Cooking Description</h4>
-        <table *ngIf="meal">
+            <h4 id="IngTitle">Cooking Description</h4>
             <tr id="rowCookNotes">
                 <td>
                     <textarea id="cookNotes" disabled>{{meal.cookNotes}}</textarea>
                 </td>
             </tr>
         </table>
-    </div>
--->
-</div> 
+    </div> 
 </div>

@@ -12,13 +12,15 @@ html {
         display: inline-block;
         width: 13%;
         height: 200px; 
-        margin-top: 5%;
+        margin-top: 2%;
 }
 .mainDiv{
     display: inline-block;
     width: 85%;
-    margin-left: 0%;
 }
 header{
     width: 70%;
+}
+tbody{
+    cursor: pointer;
 }

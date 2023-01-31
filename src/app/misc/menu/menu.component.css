@@ -1,25 +1,37 @@
-#MenuName {
+/*#MenuName {
     display: inline-table;
     font-size: larger;
     margin-top: 15%;
     text-decoration: none;
     color: black;
-    /*width: 10%;*/
 }
-#MenuName:hover{
-    color: green;
+*/
+#MenuName{
+    text-decoration: none;
+    padding: 0px 15px;
+    color: rgb(1, 16, 26);  /* rgb(5, 63, 102) */
+    background-color: rgba(5, 77, 105, 0.103); /* rgb(9, 139, 139) */
+    font-size:x-large;
+    font-style: italic;
+    border-style: outset;
+    border-color: rgba(7, 160, 160, 0);
+    border-radius: 10%;
+    margin-bottom: 10%;
+    
 }
 nav{
     width: 90%;
     height: 100% !important;
-    margin-left: 10%;
+    margin-left: 8%;
 }
 ul {
     background-color: rgba(212, 223, 235, 0.404); /* 213, 222, 231 */
     border-radius: 10%;
-    height: 100%;
-    padding-inline-start: 20px;
-    padding-top: 10%;
+    height: 350px;
+    padding-inline-start: 15px;
+    padding-top: 20px;
+    padding-right: 0.5%;
+    position: fixed;
 }
 tr, td {
     border-color: rgb(133, 168, 189) !important;
