@@ -1,13 +1,13 @@
 li {
     display: block;
-    padding-top: 5%;
+    padding-top: 8%;
 }
 a{
     text-decoration: none;
     padding: 0px 8px;
     color: white;  /* rgb(51, 90, 92) */
     background-color: rgb(4, 99, 136); /* rgb(9, 139, 139) */
-    font-size: larger;
+    font-size: medium;
     font-style: italic;
     border-style: outset;
     border-color: rgb(15, 135, 151);

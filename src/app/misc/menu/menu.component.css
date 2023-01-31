@@ -11,7 +11,7 @@
     padding: 0px 15px;
     color: rgb(1, 16, 26);  /* rgb(5, 63, 102) */
     background-color: rgba(5, 77, 105, 0.103); /* rgb(9, 139, 139) */
-    font-size:x-large;
+    font-size:larger;
     font-style: italic;
     border-style: outset;
     border-color: rgba(7, 160, 160, 0);
