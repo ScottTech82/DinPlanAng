@@ -3,14 +3,7 @@ table {
     margin-top: 2%;
     margin-left: 5%;
 }
-#menuDiv{
-    display: inline-block;
-    width: 13%;
-    height: 200px; 
-    margin-top: 5%;
-
-}
-#rightDiv{
+.mainDiv{
     display: inline-block;
     width: 85%;
     margin-left: 0%;

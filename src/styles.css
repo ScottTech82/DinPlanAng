@@ -5,4 +5,20 @@ body{
 input, select {
     border-radius: 10px;
 }
-
+html {
+    background-image: url(/assets/background1.jpg);
+}
+.sideMenu{
+        display: inline-block;
+        width: 13%;
+        height: 200px; 
+        margin-top: 5%;
+}
+.mainDiv{
+    display: inline-block;
+    width: 85%;
+    margin-left: 0%;
+}
+header{
+    width: 70%;
+}

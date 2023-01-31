@@ -1,70 +1,71 @@
 <div>
+<div class="sideMenu">
+    <app-menu></app-menu>
+</div>
+<div class="mainDiv">
     <app-header [pageTitle]="pageTitle" [subTitle]="subTitle"></app-header>
-    <div>
-        <span id="note">*You can click on the meal to update it or click the button.</span>
-    </div>
-    <div id="meal-detail">
-    <table class="table table-sm table-responsive table-hover" id="mealTable">
+    <table class="table table-sm table-responsive col-auto">
         <thead>
             <tr>
-                <!-- <th>Id</th> -->
                 <th>Name</th>
                 <th>Type</th>
                 <th>Cook Time</th>
                 <th>Cook Temp</th>
                 <th>Cook Type</th>
-                <!-- <th>Description</th> -->
             </tr>
         </thead>
         <tbody>
-            <tr *ngIf="meal">
-                <!-- <td><button id="uBtn" class="btn btn-link" (click)="update(meal.id)">{{meal.id}}</button></td> -->
+            <tr *ngIf="meal" id="mealrow">
                 <td (click)="update(meal.id)"><button id="uBtn" class="btn btn-link" (click)="update(meal.id)">{{meal.name}}</button></td>
                 <td (click)="update(meal.id)"><button id="uBtn" class="btn btn-link" (click)="update(meal.id)">{{meal.type}}</button></td>
                 <td (click)="update(meal.id)"><button id="uBtn" class="btn btn-link" (click)="update(meal.id)">{{meal.cookTime}}</button></td>
                 <td (click)="update(meal.id)"><button id="uBtn" class="btn btn-link" (click)="update(meal.id)">{{meal.cookTemp}}</button></td>
                 <td (click)="update(meal.id)"><button id="uBtn" class="btn btn-link" (click)="update(meal.id)">{{meal.cookType}}</button></td>
-                <!-- <td><button id="uBtn" class="btn btn-link" (click)="update(meal.id)">{{meal.description}}</button></td> -->
+            </tr>
+            <tr>&nbsp;</tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>
+                    <button class="btn btn-outline-secondary" id="updateBtn" (click)="update(meal.id)">Update Meal</button>
+                </td>
+                <td>&nbsp;</td>
+                <td>
+                    <button class="btn btn-outline-secondary" id="printBtn" (click)="print()">Printable Version</button>
+                </td>
             </tr>
         </tbody>
     </table>
-    <div id="updateMealBtn">
-        <button class="btn btn-outline-secondary" id="updateBtn" (click)="update(meal.id)">Update Meal</button>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <button class="btn btn-outline-secondary" id="printBtn" (click)="print()">Printable Version</button>
-    </div>
-    <br>
-    <h4 id="IngTitle">Ingredients</h4>
-    <br>
-    <div>
-        <table class="table table-sm table-responsive table-hover" id="ingTable">
-            <thead>
-                <tr>
-                    <!-- <th>Id</th> -->
-                    <th>Name</th>
-                    <th>Amount</th>
-                    <th>Notes</th>
+    <table class="table table-sm table-responsive table-hover">
+        <thead>
+            <tr>
+                <br>
+                <h4 id="IngTitle">Ingredients</h4>
+                <br>
+            </tr>
+            <tr>
+                <th>Name</th>
+                <th>Amount</th>
+                <th>Notes</th>
+            </tr>
+        </thead>
+        <tbody>
+            <ng-container *ngIf="meal">
+                <tr *ngFor="let ing of meal.ingredients">
+                    <td (click)="updateIng(ing.id)"><button id="uBtn" class="btn btn-link" (click)="updateIng(ing.id)">{{ing.name}}</button></td>
+                    <td (click)="updateIng(ing.id)"><button id="uBtn" class="btn btn-link" (click)="updateIng(ing.id)">{{ing.amount}}</button></td>
+                    <td (click)="updateIng(ing.id)"><button id="uBtn" class="btn btn-link" (click)="updateIng(ing.id)">{{ing.notes}}</button></td>
                 </tr>
-            </thead>
-            <tbody>
-                <ng-container *ngIf="meal">
-                    <tr *ngFor="let ing of meal.ingredients">
-                        <!-- <td>{{ing.id}}</td> -->
-                        <td (click)="updateIng(ing.id)"><button id="uBtn" class="btn btn-link" (click)="updateIng(ing.id)">{{ing.name}}</button></td>
-                        <td (click)="updateIng(ing.id)"><button id="uBtn" class="btn btn-link" (click)="updateIng(ing.id)">{{ing.amount}}</button></td>
-                        <td (click)="updateIng(ing.id)"><button id="uBtn" class="btn btn-link" (click)="updateIng(ing.id)">{{ing.notes}}</button></td>
-                    </tr>
-                    <tr id="addIng">
-                        <button id="addIngBtn" class="btn btn-outline-secondary" (click)="addIng()">Add Ingredient</button>
-                    </tr>
-                </ng-container>
-            </tbody>
-        </table>
+                <tr id="addIng">
+                    <button id="addIngBtn" class="btn btn-outline-secondary" (click)="addIng()">Add Ingredient</button>
+                </tr>
+            </ng-container>
+        </tbody>
+    </table>
+        <!--
         <br>
         <br>
         <h4 id="IngTitle">Cooking Description</h4>
-        <table *ngIf="meal" id="ingTable">
+        <table *ngIf="meal">
             <tr id="rowCookNotes">
                 <td>
                     <textarea id="cookNotes" disabled>{{meal.cookNotes}}</textarea>
@@ -72,5 +73,6 @@
             </tr>
         </table>
     </div>
-    </div>
+-->
+</div> 
 </div>
