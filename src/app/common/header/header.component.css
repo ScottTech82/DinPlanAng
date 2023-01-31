@@ -4,13 +4,13 @@
     font-weight: bold;
     font-style: italic;
     padding-left: 40%;
-    color:rgb(73, 124, 126);
+    color: rgb(3, 98, 110);/* rgb(73, 124, 126); */
 }
 #subtitle{
     font-family: 'Times New Roman', Times, serif;
     font-size: x-large;
     font-style: italic;
-    color: rgb(73, 124, 126);
+    color: rgb(5, 96, 99);
     padding-left: 1%;
     padding-bottom: 1%;
     margin-top: 12%;

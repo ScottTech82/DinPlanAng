@@ -11,24 +11,8 @@ table {
 #header{
     width: 70%;
 }
-app-menu{
-    height: 100% !important;
-    width: 100%;
-    padding-top: 10%;
-}
 .table-hover tbody tr:hover{
     background-color: rgba(3, 145, 167, 0.171);
-}
-#create{
-    /* text-decoration: none; */
-    color:rgb(34, 100, 102);
-    /* padding-left: 22%; */
-    /* color: black; */
-    margin-left: 0%;
-    /* padding: 0px 15px; */
-}
-#create:hover{
-    color:green;
 }
 #uBtn{
     text-decoration: none;
@@ -36,17 +20,12 @@ app-menu{
 }
 #note{
     padding-left: 35%;
-    color: rgb(25, 95, 97);
+    color: rgb(2, 66, 68); /*rgb(25, 95, 97);*/
     font-style: italic;
-}
-#darkmode{
-    background-color: black;
-    color: white;
-    
 }
 #createBtn{
     padding: 0px 20px;
-    color:rgb(34, 100, 102);
+    color: black; /*rgb(34, 100, 102);*/
     border-color: white;
     border-style: outset;
     font-size: small;
