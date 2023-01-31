@@ -9,11 +9,26 @@
 #MenuName:hover{
     color: green;
 }
+nav{
+    display: inline-table;
+    width: 13%;
+}
 #menuTable {
-    border-style:dashed;
-    border-color: rgb(129, 128, 128) !important;
+    /*
+    border-style:inset;
+    border-color: rgb(133, 168, 189) !important;
     width: 70%;
-    
+    height: 100%;
+    */
+    margin-left: 5%;
+    background-color: rgb(213, 222, 231);
+    border-radius: 10%;
+}
+tr, td {
+    border-color: rgb(133, 168, 189) !important;
+    width: 5%;
+    height: 100%;
+    margin-left: 5%;
 }
 
 

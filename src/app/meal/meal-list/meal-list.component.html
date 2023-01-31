@@ -1,6 +1,11 @@
-<div *ngIf="darkmode === false" id="users" class="row justify-content-center">
-    <app-header [pageTitle]="pageTitle" [subTitle]="subTitle"></app-header>
-    <table>
+<div id="leftDiv">
+    <app-menu></app-menu>
+</div>
+<div id="headerDiv">
+    <app-header [pageTitle]="pageTitle" [subTitle]="subTitle" id="header"></app-header>
+</div>
+<div *ngIf="darkmode === false" id="rightDiv">
+    <table id="buttonTable">
         <!-- <a routerLink="/meal/create" id="create">Add Meal</a> -->
         <button class="btn btn-outline-info" id="createBtn" (click)="createBtn()">Add New Meal</button>
         <span id="note">*Please click on a meal to see the ingredient list and further details.</span>
