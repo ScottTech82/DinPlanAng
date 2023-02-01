@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { SystemService } from 'src/app/common/system.service';
 import { Meal } from 'src/app/meal/meal.class';
+import { MealService } from 'src/app/meal/meal.service';
 import { Ingredient } from '../ingredient.class';
 import { IngredientService } from '../ingredient.service';
 
@@ -17,12 +18,14 @@ export class IngUpdateComponent implements OnInit {
   showVerifBtn: boolean = false;
   ing!: Ingredient;
   meal!: Meal;
+  meals: Meal[] = [];
 
   constructor(
     private ingsvc: IngredientService,
     private route: ActivatedRoute,
     private router: Router,
-    private sys: SystemService
+    private sys: SystemService,
+    private mealsvc: MealService
   ) { }
 
   update(): void {
@@ -77,7 +80,14 @@ export class IngUpdateComponent implements OnInit {
         }
       }
     });
-    this.meal = this.sys.meal;
+    this.mealsvc.list().subscribe({
+      next: (res) => {
+        this.meals = res;
+      }, 
+      error: (err) => {
+        console.error(err);
+      }
+    })
   }
 
 }
