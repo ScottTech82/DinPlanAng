@@ -30,11 +30,14 @@ export class MealDetailsComponent implements OnInit {
     this.router.navigateByUrl(`/ing/update/${id}`);
   }
   print(): void {
-    /*window.print();*/
-    window.open(`./meal/print/${this.meal.id}`, '_blank');
-    window.focus();
+    /*Attempted a couple different options. While the first one below worked in testing
+    it did not work when live on the website.  Instead chose to use a routerLink.*/
     
-    /* this.router.navigateByUrl("/meal/print");*/
+    /*window.print();*/
+    /*window.open(`/meal/print/${this.meal.id}`, '_blank');
+    window.focus(); */
+    
+    /*this.router.navigateByUrl(`/meal/print/${this.meal.id}`);*/
     
     /*
     var divToPrint = document.getElementById('meal-detail');

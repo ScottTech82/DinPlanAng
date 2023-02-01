@@ -35,7 +35,9 @@
                 </td>
                 <td>&nbsp;</td>
                 <td>
-                    <button class="btn btn-outline-secondary" id="printBtn" (click)="print()">Printable Version</button>
+                    <a [routerLink]="['/meal/print', this.meal.id]" target="_blank">
+                    <button class="btn btn-outline-secondary" id="printBtn" >Printable Version</button>
+                    </a>
                 </td>
             </tr>
         </tbody>
