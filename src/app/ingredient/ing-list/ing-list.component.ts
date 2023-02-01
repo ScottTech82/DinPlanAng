@@ -11,8 +11,8 @@ import { IngredientService } from '../ingredient.service';
 })
 export class IngListComponent implements OnInit {
 
-  pageTitle: string = "Dinner Planner!";
-  subTitle: string = " - Ingredient List -";
+  pageTitle: string = "Dinner Plan";
+  subTitle: string = "- Ingredient List -";
   ings: Ingredient[] = [];
 
   constructor(

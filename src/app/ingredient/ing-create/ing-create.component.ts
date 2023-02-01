@@ -12,7 +12,7 @@ import { IngredientService } from '../ingredient.service';
 })
 export class IngCreateComponent implements OnInit {
 
-  pageTitle: string = "Dinner Planner!";
+  pageTitle: string = "Dinner Plan";
   subTitle: string = "- New Ingredient -";
   ing: Ingredient = new Ingredient;
   meal!: Meal;
