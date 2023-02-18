@@ -12,8 +12,8 @@ import { MemberService } from '../member.service';
 export class MemberListComponent implements OnInit {
   
   members: Member[] = [];
-  pageTitle: string = "Dinner Planner!";
-  subTitle: string = "- Member List -";
+  pageTitle: string = "Dinner Plan";
+  subTitle: string = "- Family Members -";
 
 
   constructor(
