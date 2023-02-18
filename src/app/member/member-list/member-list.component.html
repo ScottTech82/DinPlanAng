@@ -17,10 +17,10 @@
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor="let u of users">
-                    <td (click)="details(u.id)"><button id="uBtn" class="btn btn-link" (click)="details(u.id)">{{u.id}}</button></td>
-                    <td (click)="details(u.id)"><button id="uBtn" class="btn btn-link" (click)="details(u.id)">{{u.username}}</button></td>
-                    <td (click)="details(u.id)"><button id="uBtn" class="btn btn-link" (click)="details(u.id)">{{u.favorite}}</button></td>
+                <tr *ngFor="let mem of members">
+                    <td (click)="details(mem.id)"><button id="uBtn" class="btn btn-link" (click)="details(mem.id)">{{mem.id}}</button></td>
+                    <td (click)="details(mem.id)"><button id="uBtn" class="btn btn-link" (click)="details(mem.id)">{{mem.name}}</button></td>
+                    <td (click)="details(mem.id)"><button id="uBtn" class="btn btn-link" (click)="details(mem.id)">{{mem.favorite}}</button></td>
                 </tr>
             </tbody>
         </table>
