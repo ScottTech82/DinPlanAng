@@ -4,27 +4,27 @@
     </div>
     <div class="mainDiv">
         <app-header [pageTitle]="pageTitle" [subTitle]="subTitle" (click)="clickAnyWhere()"></app-header>
-        <table class="table table-sm" id="updateTable" *ngIf="user" (click)="clickAnyWhere()">
+        <table class="table table-sm" id="updateTable" *ngIf="member" (click)="clickAnyWhere()">
             <button class="btn btn-outline-secondary" id="cancelB" (click)="cancel()">Cancel Update</button>
                 <tr>
                     <th>Id</th>
-                    <td><input [(ngModel)]="user.id" type="number" disabled ngDefaultControl></td>
+                    <td><input [(ngModel)]="member.id" type="number" disabled ngDefaultControl></td>
                 </tr>
                 <tr>
                     <th>Username</th>
-                    <td *ngIf="showVerifBtn === false"><input [(ngModel)]="user.username" ngDefaultControl></td>
-                    <td *ngIf="showVerifBtn === true"><input [(ngModel)]="user.username" ngDefaultControl disabled></td>
+                    <td *ngIf="showVerifBtn === false"><input [(ngModel)]="member.username" ngDefaultControl></td>
+                    <td *ngIf="showVerifBtn === true"><input [(ngModel)]="member.username" ngDefaultControl disabled></td>
                 </tr>
                 <tr>
                     <th>Favorite</th>
                     <td *ngIf="showVerifBtn === false">
-                        <select id="mealsList" [(ngModel)]="user.favorite" ngDefaultControl>
+                        <select id="mealsList" [(ngModel)]="member.favorite" ngDefaultControl>
                             <option *ngFor="let m of meals" [ngValue]="m.name">{{m.name}}</option>
                         </select>
                         <span class="tableNote">*choose from already entered meals</span>
                     </td>
                     <td *ngIf="showVerifBtn === true">
-                        <select id="mealsList" [(ngModel)]="user.favorite" ngDefaultControl disabled>
+                        <select id="mealsList" [(ngModel)]="member.favorite" ngDefaultControl disabled>
                             <option *ngFor="let m of meals" [ngValue]="m.name">{{m.name}}</option>
                         </select>
                         <span class="tableNote">*choose from already entered meals</span>
