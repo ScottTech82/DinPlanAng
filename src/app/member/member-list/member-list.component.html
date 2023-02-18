@@ -6,7 +6,10 @@
         <app-header [pageTitle]="pageTitle" [subTitle]="subTitle"></app-header>
         <table>
             <button class="btn btn-outline-info" id="createBtn" (click)="create()">Add New Member</button>
-            <span class="tableNote">*You may click on a family member to update the info or remove the profile.</span>
+            <tr>&nbsp;</tr>
+            <tr>
+                <td class="tableNote">*You may click on a family member to update the info or remove the profile.</td>
+            </tr>
         </table>
         <table class="table table-sm table-hover table-responsive col-auto" id="usertable">
             <thead>

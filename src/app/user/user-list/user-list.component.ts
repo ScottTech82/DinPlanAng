@@ -13,7 +13,7 @@ export class UserListComponent implements OnInit {
 
   users: User[] = [];
   pageTitle: string = "Dinner Plan";
-  subTitle: string = "- Member List -";
+  subTitle: string = "- User List -";
 
 
   constructor(
