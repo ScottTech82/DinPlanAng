@@ -21,11 +21,18 @@ export class MemberCreateComponent implements OnInit {
   ) { }
 
   create(): void {
-
+    this.memsvc.create(this.member).subscribe({
+      next: (res) => {
+        this.router.navigateByUrl("/member/list");
+      },
+      error: (err) => {
+        console.log(err);
+      }
+    })
   }
 
   cancel(): void {
-    
+    this.router.navigateByUrl("/member/list")
   }
 
   ngOnInit(): void {
