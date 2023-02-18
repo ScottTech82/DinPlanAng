@@ -13,6 +13,9 @@ import { IngListComponent } from './ingredient/ing-list/ing-list.component';
 import { IngCreateComponent } from './ingredient/ing-create/ing-create.component';
 import { MealPrintComponent } from './meal/meal-print/meal-print.component';
 import { IngUpdateComponent } from './ingredient/ing-update/ing-update.component';
+import { MemberListComponent } from './member/member-list/member-list.component';
+import { MemberCreateComponent } from './member/member-create/member-create.component';
+import { MemberUpdateComponent } from './member/member-update/member-update.component';
 
 const routes: Routes = [
 {path: "", redirectTo: "/meal/list", pathMatch: "full"},
@@ -20,6 +23,9 @@ const routes: Routes = [
 {path: "user/list", component: UserListComponent},
 {path: "user/create", component: UserCreateComponent},
 {path: "user/update/:id", component: UserUpdateComponent},
+{path: "member/list", component: MemberListComponent},
+{path: "member/create", component: MemberCreateComponent},
+{path: "member/update/:id", component: MemberUpdateComponent},
 {path: "meal/list", component: MealListComponent},
 {path: "meal/create", component: MealCreateComponent},
 {path: "meal/update/:id", component: MealUpdateComponent},
