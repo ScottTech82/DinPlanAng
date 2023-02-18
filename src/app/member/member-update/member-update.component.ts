@@ -28,7 +28,7 @@ export class MemberUpdateComponent implements OnInit {
   update(): void {
     this.memsvc.change(this.member).subscribe({
       next: (res) => {
-        this.router.navigateByUrl("user/list");
+        this.router.navigateByUrl("member/list");
       },
       error: (err) => {
         console.error(err);
@@ -40,14 +40,14 @@ export class MemberUpdateComponent implements OnInit {
     this.showVerifBtn = !this.showVerifBtn;
   }
   cancel(): void {
-    this.router.navigateByUrl("user/list");
+    this.router.navigateByUrl("member/list");
   }
 
   verifyRemove(): void {
     this.memsvc.remove(this.member.id).subscribe({
       next: (res) => {
         console.debug("The User was deleted!");
-        this.router.navigateByUrl("/user/list");
+        this.router.navigateByUrl("/member/list");
       },
       error: (err) => {
         console.error(err);

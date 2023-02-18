@@ -9,7 +9,7 @@ import { Member } from './member.class';
 })
 export class MemberService {
 
-  baseurl: string = `${this.sys.baseurl}/users`;
+  baseurl: string = `${this.sys.baseurl}/members`;
 
   constructor(
     private sys: SystemService,
