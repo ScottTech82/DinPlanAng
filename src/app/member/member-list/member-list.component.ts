@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { SystemService } from 'src/app/common/system.service';
-import { User } from 'src/app/user/user.class';
-import { UserService } from 'src/app/user/user.service';
+import { Member } from '../member.class';
+import { MemberService } from '../member.service';
 
 @Component({
   selector: 'app-member-list',
@@ -11,29 +11,29 @@ import { UserService } from 'src/app/user/user.service';
 })
 export class MemberListComponent implements OnInit {
   
-  users: User[] = [];
+  members: Member[] = [];
   pageTitle: string = "Dinner Planner!";
   subTitle: string = "- Member List -";
 
 
   constructor(
     private sys: SystemService,
-    private usersvc: UserService,
+    private memsvc: MemberService,
     private router: Router
 
   ) { }
 
   details(id: number): void {
-    this.router.navigateByUrl(`/user/update/${id}`);
+    this.router.navigateByUrl(`/member/update/${id}`);
   }
   create(): void {
-    this.router.navigateByUrl("/user/create");
+    this.router.navigateByUrl("/member/create");
   }
 
   ngOnInit(): void {
-    this.usersvc.list().subscribe({
+    this.memsvc.list().subscribe({
       next: (res) => {
-        this.users = res;
+        this.members = res;
       },
       error: (err) => {
         console.error(err);
