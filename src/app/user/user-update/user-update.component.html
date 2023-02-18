@@ -18,13 +18,13 @@
                 <tr>
                     <th>Favorite</th>
                     <td *ngIf="showVerifBtn === false">
-                        <select id="mealsList" [(ngModel)]="user.favorite" ngDefaultControl>
+                        <select id="mealsList" [(ngModel)]="user.email" ngDefaultControl>
                             <option *ngFor="let m of meals" [ngValue]="m.name">{{m.name}}</option>
                         </select>
                         <span class="tableNote">*choose from already entered meals</span>
                     </td>
                     <td *ngIf="showVerifBtn === true">
-                        <select id="mealsList" [(ngModel)]="user.favorite" ngDefaultControl disabled>
+                        <select id="mealsList" [(ngModel)]="user.email" ngDefaultControl disabled>
                             <option *ngFor="let m of meals" [ngValue]="m.name">{{m.name}}</option>
                         </select>
                         <span class="tableNote">*choose from already entered meals</span>
