@@ -39,10 +39,10 @@
             </td>
         </tr>
         <tr>
-            <th>User</th>
+            <th>Member</th>
             <td>
                 <select id="cookTypeSelect" [(ngModel)]="meal.userid">
-                    <option *ngFor="let u of user" [ngValue]="u.id">{{u.username}}</option>
+                    <option *ngFor="let m of member" [ngValue]="m.id">{{m.name}}</option>
                 </select>
             </td>
         </tr>
