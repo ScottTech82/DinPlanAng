@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Member } from 'src/app/member/member.class';
+import { MemberService } from 'src/app/member/member.service';
 import { User } from 'src/app/user/user.class';
 import { UserService } from 'src/app/user/user.service';
 import { Meal } from '../meal.class';
@@ -16,11 +18,13 @@ export class MealCreateComponent implements OnInit {
   subTitle: string = "- New Meal -";
   meal: Meal = new Meal;
   user: User[] = [];
+  member: Member[] = [];
 
   constructor(
     private mealsvc: MealService,
     private router: Router,
     private usersvc: UserService,
+    private memsvc: MemberService,
   ) { }
 
   add(): void {
@@ -39,9 +43,9 @@ export class MealCreateComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.usersvc.list().subscribe({
+    this.memsvc.list().subscribe({
       next: (res) => {
-        this.user = res;
+        this.member = res;
       },
       error: (err) => {
         console.error(err);
